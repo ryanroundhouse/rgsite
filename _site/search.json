@@ -1,0 +1,11 @@
+{"search" : [{"foo": "foo"},{
+    "url" : "/posts/2020/blog-post-1/",
+    "title" : "This Is My First Ever Post",
+    "text" : "this first ever post this blogeleventy super fresh init",
+    "test" : "test"
+  },{
+    "url" : "/posts/2020/blog-post-2/",
+    "title" : "How To Get Rich Quick",
+    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
+    "test" : "test"
+  }]}

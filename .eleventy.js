@@ -9,6 +9,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('dateReadable', date => {
         return moment(date).utc().format('LL');
     });
+    eleventyConfig.addFilter("squash", require("./src/_filters/squash.js") );
+
+    eleventyConfig.addCollection("posts", function(collection) {
+      return collection.getFilteredByGlob("src/posts/**/blog/*.md").reverse();
+    });
+
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
     
     return {
