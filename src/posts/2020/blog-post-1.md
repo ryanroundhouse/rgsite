@@ -1,5 +1,5 @@
 ---
-layout: post-layout.njk 
+layout: layouts/post-layout.njk 
 title: This Is My First Ever Post
 date: 2020-05-30
 tags: ['post']

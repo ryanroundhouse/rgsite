@@ -2,23 +2,37 @@
 <html lang="en"> 
 <head>
   <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>RyanGraham.ca</title> 
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+</style>
+  
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head> 
 <body>
   <header class="row m-0">
       <div class="col-auto mr-auto">
         <ul>
-          <a href="/">
-            <img class="rg-logo" src="/img/rg-logo.png"/>
-            RyanGraham.ca
-          </a>
+          <li>
+            <a href="/">
+              <img class="rg-logo" src="/img/rg-logo.png"/>
+              RyanGraham.ca
+            </a>
+          </li>
         </ul>
       </div>
       <div class="col-auto m-2">
-          <a href="/About">About</a>
+        <ul class="row m-0">
+          <li>
+            <a href="/About">About</a>
+          </li>
+          <li>
+            <a href="/Blog">Blog</a>
+          </li>
+          <li>
+            <a href="/Products">Products</a>
+          </li>
+        </ul>
       </div>
   </header>
   <main> 
@@ -31,6 +45,7 @@
       <h1>
         <a href="/posts/2020/blog-post-2/">How To Get Rich Quick</a>
       </h1>
+      
       <time datetime="2020-06-01T00:00:00.000Z">June 1, 2020</time>
       <h2><p>Buy the latest and greatest cryptocurrency that no-one has heard of.</p></h2>
       <a href="/posts/2020/blog-post-2/" aria-label="Read more on How To Get Rich Quick">Read more</a>
@@ -40,6 +55,7 @@
       <h1>
         <a href="/posts/2020/blog-post-1/">This Is My First Ever Post</a>
       </h1>
+      
       <time datetime="2020-05-30T00:00:00.000Z">May 30, 2020</time>
       <h2><p>This is the first post on my blog.</p></h2>
       <a href="/posts/2020/blog-post-1/" aria-label="Read more on This Is My First Ever Post">Read more</a>

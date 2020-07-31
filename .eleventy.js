@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
     
+    eleventyConfig.addPassthroughCopy("src/css");
     // eleventyConfig.setTemplateFormats(["md", "html", "png", "scss", "css"])
 
     return {

@@ -1,5 +1,5 @@
 ---
-layout: post-layout.njk 
+layout: layouts/post-layout.njk 
 title: How To Get Rich Quick
 date: 2020-06-01
 tags: ['post']

@@ -4,9 +4,8 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>RyanGraham.ca</title> 
-  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
-</style>
-  
+  <style>{% include "css/main.css" %}</style>
+  {# <link rel="stylesheet" type="text/css" href="css/style.css"> #}
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head> 
 <body>
@@ -36,16 +35,7 @@
       </div>
   </header>
   <main> 
-    <article class="article">
-  <h1>How To Get Rich Quick</h1> 
-  <time datetime="2020-06-01T00:00:00.000Z">June 1, 2020</time> 
-  <!-- Excerpt Start -->
-<p>Buy the latest and greatest cryptocurrency that no-one has heard of.</p>
-<!-- Excerpt End -->
-<h2>Legal Stuff</h2>
-<p>We do not accept any liability for any loss or damage.</p>
-
-</article>
+    {{ content | safe }}
   </main> 
   <footer>Site Footer</footer> 
 </body> 

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "start": "concurrently \"gulp build & gulp watch\" \"npx @11ty/eleventy --serve\"",
+    "build": "gulp build & npx @11ty/eleventy",
+    "debug": "gulp build & DEBUG=* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,11 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "clean-css": "^4.2.3",
+    "concurrently": "^5.2.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "moment": "^2.27.0",
     "node-sass-promise": "^1.0.0"
   },

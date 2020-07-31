@@ -1,1 +1,0 @@
-body{display:grid;height:100vh;grid-template:auto 1fr auto/auto 1fr auto;margin:0}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1/4}main{grid-column:2/3}footer{padding:2rem;text-align:center;grid-column:1/4}

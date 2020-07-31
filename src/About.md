@@ -1,5 +1,5 @@
 --- 
-layout: base-layout.njk 
+layout: /layouts/base-layout.njk 
 ---
 # About This Blog 
   
