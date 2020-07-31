@@ -16,5 +16,8 @@
     "clean-css": "^4.2.3",
     "moment": "^2.27.0",
     "node-sass-promise": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0"
   }
 }

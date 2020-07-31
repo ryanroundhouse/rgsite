@@ -2,21 +2,22 @@
 layout: base-layout.njk
 pagination:
   data: collections.post
-  size: 10
+  size: 5
   reverse: true
   alias: posts
 ---
-<div class="parent">
+<div class="row m-0">
+  <h1>Posts</h1>
+</div>
+<div class="row m-0 justify-content-around">
   {% for post in posts %}
-    <article>
+    <article class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3 bg-white p-2 rounded-lg shadow text-center">
       <h1>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h1>
       <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
-      {% excerpt post %}
-
-      <a href="{{ post.url | url }}"
-          aria-label="Read more on {{ post.data.title }}">Read more</a>
+      <h2>{% excerpt post %}</h2>
+      <a href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
     </article>
   {% endfor %}
 </div>

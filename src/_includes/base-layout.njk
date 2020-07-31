@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <title>Eleventy Blog</title> 
+  <title>RyanGraham.ca</title> 
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 </head> 
 <body>
-  <header>
-    <a href="/"><img class="rg-logo" src="/img/rg-logo.png"/></a>
-    <a href="/About">About</a>
-  </header> 
+  <header class="row m-0">
+      <div class="col-auto mr-auto">
+        <ul>
+          <a href="/">
+            <img class="rg-logo" src="/img/rg-logo.png"/>
+            RyanGraham.ca
+          </a>
+        </ul>
+      </div>
+      <div class="col-auto m-2">
+          <a href="/About">About</a>
+      </div>
+  </header>
   <main> 
     {{ content | safe }}
   </main> 
