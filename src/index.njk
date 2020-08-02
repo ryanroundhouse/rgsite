@@ -25,7 +25,7 @@ pagination:
         </h1>
         
         <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
-        <h2>{% excerpt post %}</h2>
+        <p>{% excerpt post %}</p>
         <a href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
       </article>
     {% endfor %}

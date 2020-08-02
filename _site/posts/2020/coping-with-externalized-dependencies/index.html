@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>RyanGraham.ca</title> 
+  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+</style>
+  
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+</head> 
+<body>
+  <header class="row m-0">
+      <div class="col-auto mr-auto">
+        <ul class="list-unstyled">
+          <li>
+            <a href="/">
+              <img class="rg-logo" src="/img/rg-logo.png"/>
+              RyanGraham.ca
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-auto m-2">
+        <ul class="row m-0 list-unstyled">
+          <li class="ml-3">
+            <a href="/About">About</a>
+          </li>
+          <li class="ml-3">
+            <a href="/Blog">Blog</a>
+          </li>
+          <li class="ml-3">
+            <a href="/Projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+  </header>
+  <main> 
+    <div>
+  <article class="article">
+    <h1>Coping with externalized dependencies</h1> 
+    <time datetime="2018-05-03T00:00:00.000Z">May 3, 2018</time> 
+    <p>Our department took a step back, agility-wise, last month.  We have been building a customer portal.  While doing so, we’ve also been building out a RESTful business layer to serve our needs.  We’ve been building functionality into the business layer as we’ve needed it to provide the functionality we need for the customer portal.</p>
+<!-- Excerpt Start -->
+<p>A couple months ago, we started talking about creating a new team that will be focused on doing nothing but building the business layer.</p>
+<!-- Excerpt End -->  The benefit would be more attention paid to the business layer beyond just what my and the other teams needed from it as we have started licensing out integrations with it.  The drawback is that they are expected to be the only team to do work in this area.  We pulled the trigger a month ago and formed the team.
+<p>Since we’ve been building out the functionality as we’ve needed it, this has left my team with a bunch of features that need to be built atop REST endpoints that haven’t been developed yet without control over their schedule.  I’ve been negotiating as best I can, but I think this will push the customer portal project forecast too far forward.</p>
+<p>I talked through this with my team today, and have come up with a strategy to deal with this in the short term while we figure out a better way forward.  I haven summarized and communicated it to the other teams in this email:</p>
+<blockquote class="blockquote" markdown='1'>
+Hi all,
+<p>Kevin, Dung, Ian and I had a conversation today about how we want to handle the business layer external dependencies that have developed with the team.  This plan has some problems, but is better than our current system of doing nothing.  First for some background on the language I’ll be using:</p>
+<p>When I refer to splitting a story either horizontally, or vertically, I am referring to the following:</p>
+<p>A horizontal split involves splitting the functionality at some tier of the software stack.  For example, split at the UI level, at the middle tier, database, or at the integration.  These horizontal splits always require stubbed out test data in order to move forward, as the split removes the actual implementation of functionality from end-to-end.
+A vertical split involves splitting off a subset of the acceptance criteria from the original story.  For example, if a story has two acceptance criteria (1 – add phone number to the customer page, 2 – ensure the format of the phone number is validated), this story can be split vertically with each acceptance criteria becoming its’ own story.
+Horizontal splits are not good from an agile perspective because the original story no longer produces any real value to the customer.</p>
+<p>Vertical splits are good from an agile perspective because they allow incremental functionality to be delivered with each providing real value to the customer.  A good backlog grooming will often involve coming up with good ways to vertically split complex stories into simpler stories.</p>
+<p>Moving forward, if you ever run into a situation where there is a test case within a test plan that you feel needs to be marked as deferred due to being limited by an external dependency for the team (for example business layer endpoint not available yet) it should trigger you to split the story “horizontally”.</p>
+<p>Once you create the new story, you must immediately move the existing “deferred” test cases from the original story to the new story while leaving behind a link to the test case’s new story test plan home.  This should prevent any test cases from falling through the cracks and being missed.</p>
+</blockquote>
+<p>I still haven’t figured out a better solution.  I have come up with some ideas for dealing with this to discuss with the rest of the department:</p>
+<ol>
+<li>Add more team members to the RESTful team (this will double down on our new team strategy).</li>
+<li>Take some of the business layer work and spread it amongst the teams (this will undermine our new team strategy).</li>
+<li>De-scope some of the business layer-heavy work from the upcoming release (this might not be possible due to customer commitments).
+If you have any good ideas, let me know!  I’d love to hear them.</li>
+</ol>
+<p>Cheers,</p>
+<p>-RG!</p>
+
+  </article>
+</div>
+  </main> 
+  <footer>Site Footer</footer> 
+</body> 
+</html>

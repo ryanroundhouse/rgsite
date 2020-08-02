@@ -6,6 +6,10 @@ const concat      = require('gulp-concat');
 const responsive  = require('gulp-responsive');
 const del         = require('del');
 
+gulp.task('cleanOutput', function(){
+  return del(['_site/**', '!_site/'], {force:true});
+});
+
 /*
   generate the css with sass
 */
@@ -18,9 +22,9 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./src/_includes/css'));
 });
 
-gulp.task('cleanImages', function(){
-  return del(['_site/img/**', '!_site/img'], {force:true});
-});
+// gulp.task('cleanImages', function(){
+//   return del(['_site/img/**', '!_site/img'], {force:true});
+// });
 
 gulp.task('resize', function () {
   return gulp
@@ -96,10 +100,10 @@ gulp.task("watch", function() {
   Let's build this sucker.
 */
 gulp.task('build', gulp.series(
+  'cleanOutput',
   'css',
   'js',
   'copyBootstrap',
-  'cleanImages',
   'resize'
 ));
 

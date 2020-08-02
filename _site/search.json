@@ -1,35 +1,10 @@
 {"search" : [{
-    "url" : "/posts/2020/blog-post-1/",
-    "title" : "This Is My First Ever Post",
-    "text" : "this first ever post this blogeleventy super fresh init",
+    "url" : "/posts/2020/coping-with-externalized-dependencies/",
+    "title" : "Coping with externalized dependencies",
+    "text" : "coping with externalized dependencies our department took step back agilitywise last month have been building customer portal while doing ’ve also out restful business layer serve needs functionality into needed provide need portal couple months ago started talking about creating new team that will focused nothing layer benefit would more attention paid beyond just what other teams from licensing integrations drawback they are expected only work this area pulled trigger month ago formed teamsince left bunch features built atop rest endpoints haven’t developed yet without control over their schedule ’ve negotiating best can think push portal project forecast too far forward talked through today come strategy deal short term figure better way forward haven summarized communicated email:hi allkevin dung ian had conversation today how want handle external team plan some problems than current system nothing first background language ’ll using:when refer splitting story either horizontally vertically referring following: horizontal split involves tier software stack example ui level middle tier database integration these splits always require stubbed test data order move forward removes actual implementation endend vertical subset acceptance criteria original story two (1 – add phone number page 2 ensure format validated) can vertically each becoming its’ own storyhorizontal good agile perspective because longer produces any real value customervertical allow incremental delivered providing customer backlog grooming often involve coming ways complex stories simpler storiesmoving ever run situation where there case within feel needs marked deferred due being limited by dependency ( example endpoint available yet) should “horizontally”once create story must immediately existing “deferred” cases leaving behind link case’s home prevent falling cracks missed still figured solution ideas dealing discuss department:add members (this double down strategy)take spread amongst undermine strategy)descope layerheavy upcoming release might possible commitments) ideas let know! ’d love hear themcheersrg!",
     "test" : "test"
   },{
-    "url" : "/posts/2020/blog-post-2/",
-    "title" : "How To Get Rich Quick",
-    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
-    "test" : "test"
-  },{
-    "url" : "/posts/2020/blog-post-3/",
-    "title" : "How To Get Rich Quick",
-    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
-    "test" : "test"
-  },{
-    "url" : "/posts/2020/blog-post-4/",
-    "title" : "How To Get Rich Quick",
-    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
-    "test" : "test"
-  },{
-    "url" : "/posts/2020/blog-post-5/",
-    "title" : "How To Get Rich Quick",
-    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
-    "test" : "test"
-  },{
-    "url" : "/posts/2020/blog-post-6/",
-    "title" : "How To Get Rich Quick",
-    "text" : "how get rich quick buy latest greatest cryptocurrency that one heard legal stuff accept any liability loss damage",
-    "test" : "test"
-  },{
-    "url" : "/posts/2020/blog-post-7/",
+    "url" : "/posts/2020/end-meetings-and-appointments-early/",
     "title" : "End meetings and appointments early",
     "text" : "end meetings appointments early these days have lot meetings fact these butt against one another meaning that overflow from meeting next steamrolls rest day can start with 5 minute overrun first which ends compounding extra 45 minutes by day sometimes ’ll try eating lunch make time way then being less engagedanother problem ’ve noticed running next don’t take reflect what discussed action items away this manifesting either missing addition list brain built create process solve puzzles maintain integrity ephemeral list done research having more effective thing stuck out discussions will expand fill whatever allocated that studies shown very limited timeframe actually spur creativity than long sprawling ones favour here most are own myself since work office 365 always bothered defaulted 30 60 increments default knew there had way situation found ’s available right through outlook 365’s calendar options find setting click file &amp;gt; options select ‘calendar’ grouping left sidebar option ‘end early’ provides 2 settings ( meetings) allow set appropriate thresholdsafter making change all been changed provide ability meeting log any new list meeting hope functionality could useful myself",
     "test" : "test"
