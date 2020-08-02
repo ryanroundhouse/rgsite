@@ -1,8 +1,10 @@
 ---
 layout: /layouts/base-layout.njk
 ---
-<article class="article">
-  <h1>{{ title }}</h1> 
-  <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time> 
-  {{ content | safe }}
-</article>
+<div>
+  <article class="article">
+    <h1>{{ title }}</h1> 
+    <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time> 
+    {{ content | safe }}
+  </article>
+</div>

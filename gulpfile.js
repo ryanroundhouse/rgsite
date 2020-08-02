@@ -1,10 +1,10 @@
-
-const gulp      = require("gulp");
-const sass      = require("gulp-sass");
-const uglify    = require('gulp-uglify');
-const concat    = require('gulp-concat');
-
-
+'use strict';
+const gulp        = require("gulp");
+const sass        = require("gulp-sass");
+const uglify      = require('gulp-uglify');
+const concat      = require('gulp-concat');
+const responsive  = require('gulp-responsive');
+const del         = require('del');
 
 /*
   generate the css with sass
@@ -18,6 +18,53 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./src/_includes/css'));
 });
 
+gulp.task('cleanImages', function(){
+  return del(['_site/img/**', '!_site/img'], {force:true});
+});
+
+gulp.task('resize', function () {
+  return gulp
+    .src('src/img/*.{png,jpg}')
+    .pipe(
+      responsive({
+        // produce multiple images from one source
+        '*.png': [
+          // {
+          //   width: 1280,
+          //   rename: {suffix: '-1280'}
+          // },
+          {
+            width: 960,
+            rename: {suffix: '-960'}
+          },
+          {
+            width: 640,
+            rename: {suffix: '-640'}
+          },
+          {
+            width: 480,
+            rename: {suffix: '-480'}
+          },
+          {
+            width: 320,
+            rename: {suffix: '-320'}
+          },
+          {
+            width: 160,
+            rename: {suffix: '-160'}
+          }]
+      }, {
+        quality: 70,
+        progressive: true,
+        withMetadata: false,
+        skipOnEnlargement: true,
+        withoutEnlargement: true,
+        errorOnUnusedConfig: false,
+        errorOnUnusedImage: false,
+        errorOnEnlargement: false
+    }))
+    .pipe(gulp.dest('_site/img'))
+})
 
 /*
  Uglify our javascript files into one.
@@ -48,8 +95,12 @@ gulp.task("watch", function() {
 /*
   Let's build this sucker.
 */
-gulp.task('build', gulp.parallel(
+gulp.task('build', gulp.series(
   'css',
   'js',
-  'copyBootstrap'
+  'copyBootstrap',
+  'cleanImages',
+  'resize'
 ));
+
+// gulp.task('build', ['css', 'js', 'copyBootstrap']);

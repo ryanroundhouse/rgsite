@@ -15,10 +15,15 @@ module.exports = function (eleventyConfig) {
       return collection.getFilteredByGlob("src/posts/**/blog/*.md").reverse();
     });
 
+    eleventyConfig.addJavaScriptFunction("myResponsiveImage", function(src, options) {
+      // returns Promise
+      return Image(src, options);
+    });
+
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
     
     eleventyConfig.addPassthroughCopy("src/css");
-    // eleventyConfig.setTemplateFormats(["md", "html", "png", "scss", "css"])
+    eleventyConfig.addPassthroughCopy("src/img");
 
     return {
         dir: {

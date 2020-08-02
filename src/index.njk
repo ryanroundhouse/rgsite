@@ -2,23 +2,32 @@
 layout: layouts/base-layout.njk
 pagination:
   data: collections.post
-  size: 5
+  size: 3
   reverse: true
   alias: posts
 ---
-<div class="row m-0">
-  <h1>Posts</h1>
-</div>
-<div class="row m-0 justify-content-around">
-  {% for post in posts %}
-    <article class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3 bg-white p-2 rounded-lg shadow text-center">
-      <h1>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </h1>
-      
-      <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
-      <h2>{% excerpt post %}</h2>
-      <a href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
-    </article>
-  {% endfor %}
+<div>
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+      <a href="#" class="text-white font-weight-bold">Continue reading...</a>
+    </div>
+  </div>
+  <div class="row m-0">
+    <h1>Latest Posts</h1>
+  </div>
+  <div class="row m-0">
+    {% for post in posts %}
+      <article class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3 bg-white p-2 rounded-lg shadow text-center">
+        <h1>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h1>
+        
+        <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+        <h2>{% excerpt post %}</h2>
+        <a href="{{ post.url | url }}" aria-label="Read more on {{ post.data.title }}">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
 </div>
