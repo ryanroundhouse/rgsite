@@ -12,6 +12,11 @@ body {
     height: 2em;
 }
 
+.three-row-aligned{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 header {
     grid-column: 1 / 4;
 }
