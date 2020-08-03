@@ -4,39 +4,40 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>RyanGraham.ca</title> 
-  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+  <style>body{background:url("/img/cardboard-flat.png");height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px;background-color:#f5f5f5}.blog-item-container .col-xl-4:first-child,.blog-item-container .col-xl-4:first-child{padding-left:0}.blog-item-container .col-xl-4:last-child,.blog-item-container .col-xl-4:last-child{padding-right:0}.rg-logo{width:2em;height:2em}header{grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
 </style>
   
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head> 
 <body>
-  <header class="row m-0">
-      <div class="col-auto mr-auto">
-        <ul class="list-unstyled">
-          <li>
-            <a href="/">
-              <img class="rg-logo" src="/img/rg-logo.png"/>
-              RyanGraham.ca
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-auto m-2">
-        <ul class="row m-0 list-unstyled">
-          <li class="ml-3">
-            <a href="/About">About</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Blog">Blog</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-  </header>
-  <main> 
-    <div>
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/>
+                RyanGraham.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Blog">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main> 
+      <div>
   <article class="article">
     <h1>End meetings and appointments early</h1> 
     <time datetime="2019-12-18T00:00:00.000Z">December 18, 2019</time> 
@@ -48,12 +49,12 @@
 <p>I have done a lot of research on having more effective meetings and one thing that I stuck out to me was that the discussions at meetings will expand to fill whatever time is allocated. In addition to that, studies have shown that meetings with a very limited timeframe actually spur on more creativity than long sprawling ones.</p>
 <p>The one thing in my favour here is that most of my meetings are meetings that I own myself. Since I work with Office 365, it always bothered me that meetings and appointments defaulted to 30 and 60 minute increments by default. I knew there had to be a way to solve this situation, and found that it’s available right through the Outlook 365’s Calendar Options.</p>
 <picture>
-  <source media="(min-width:960px)" srcset="/img/end-early-960.png">
-  <source media="(min-width:640px)" srcset="/img/end-early-640.png">
-  <source media="(min-width:480px)" srcset="/img/end-early-480.png">
-  <source media="(min-width:320px)" srcset="/img/end-early-320.png">
-  <source media="(min-width:160px)" srcset="/img/end-early-160.png">
-  <img src="/img/end-early.png" alt="Flowers" style="width:auto;">
+  <source media="(min-width:960px)" srcset="/img/blog/end-early-960.png">
+  <source media="(min-width:640px)" srcset="/img/blog/end-early-640.png">
+  <source media="(min-width:480px)" srcset="/img/blog/end-early-480.png">
+  <source media="(min-width:320px)" srcset="/img/blog/end-early-320.png">
+  <source media="(min-width:160px)" srcset="/img/blog/end-early-160.png">
+  <img src="/img/blog/end-early.png" alt="Flowers" style="width:auto;">
 </picture>
 <p>To find this setting you click on File &gt; Options, then select the ‘Calendar’ grouping on the left sidebar.</p>
 <p>The option ‘End appointments and meetings early’ provides for 2 settings (&lt; 60 minute meetings and &gt; 60 minute meetings) that allow you to set appropriate thresholds.</p>
@@ -61,7 +62,8 @@
 
   </article>
 </div>
-  </main> 
-  <footer>Site Footer</footer> 
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
 </body> 
 </html>

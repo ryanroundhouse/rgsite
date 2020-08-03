@@ -9,34 +9,36 @@
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head> 
 <body>
-  <header class="row m-0">
-      <div class="col-auto mr-auto">
-        <ul class="list-unstyled">
-          <li>
-            <a href="/">
-              <img class="rg-logo" src="/img/rg-logo.png"/>
-              RyanGraham.ca
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-auto m-2">
-        <ul class="row m-0 list-unstyled">
-          <li class="ml-3">
-            <a href="/About">About</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Blog">Blog</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-  </header>
-  <main> 
-    {{ content | safe }}
-  </main> 
-  <footer>Site Footer</footer> 
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/>
+                RyanGraham.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Blog">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main> 
+      {{ content | safe }}
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
 </body> 
 </html>

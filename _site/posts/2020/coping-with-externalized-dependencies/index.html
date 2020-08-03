@@ -4,39 +4,40 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>RyanGraham.ca</title> 
-  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+  <style>body{background:url("/img/cardboard-flat.png");height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px;background-color:#f5f5f5}.blog-item-container .col-xl-4:first-child,.blog-item-container .col-xl-4:first-child{padding-left:0}.blog-item-container .col-xl-4:last-child,.blog-item-container .col-xl-4:last-child{padding-right:0}.rg-logo{width:2em;height:2em}header{grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
 </style>
   
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head> 
 <body>
-  <header class="row m-0">
-      <div class="col-auto mr-auto">
-        <ul class="list-unstyled">
-          <li>
-            <a href="/">
-              <img class="rg-logo" src="/img/rg-logo.png"/>
-              RyanGraham.ca
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-auto m-2">
-        <ul class="row m-0 list-unstyled">
-          <li class="ml-3">
-            <a href="/About">About</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Blog">Blog</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-  </header>
-  <main> 
-    <div>
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/>
+                RyanGraham.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Blog">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main> 
+      <div>
   <article class="article">
     <h1>Coping with externalized dependencies</h1> 
     <time datetime="2018-05-03T00:00:00.000Z">May 3, 2018</time> 
@@ -69,7 +70,8 @@ If you have any good ideas, let me know!  I’d love to hear them.</li>
 
   </article>
 </div>
-  </main> 
-  <footer>Site Footer</footer> 
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
 </body> 
 </html>

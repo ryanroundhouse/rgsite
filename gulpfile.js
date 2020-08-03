@@ -28,7 +28,7 @@ gulp.task('css', function() {
 
 gulp.task('resize', function () {
   return gulp
-    .src('src/img/*.{png,jpg}')
+    .src('src/img/blog/*.{png,jpg}')
     .pipe(
       responsive({
         // produce multiple images from one source
@@ -67,7 +67,7 @@ gulp.task('resize', function () {
         errorOnUnusedImage: false,
         errorOnEnlargement: false
     }))
-    .pipe(gulp.dest('_site/img'))
+    .pipe(gulp.dest('_site/img/blog'))
 })
 
 /*

@@ -4,41 +4,42 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>RyanGraham.ca</title> 
-  <style>body{display:grid;height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px}.rg-logo{width:2em;height:2em}header{padding:2rem;grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+  <style>body{background:url("/img/cardboard-flat.png");height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px;background-color:#f5f5f5}.blog-item-container .col-xl-4:first-child,.blog-item-container .col-xl-4:first-child{padding-left:0}.blog-item-container .col-xl-4:last-child,.blog-item-container .col-xl-4:last-child{padding-right:0}.rg-logo{width:2em;height:2em}header{grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
 </style>
   
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 </head> 
 <body>
-  <header class="row m-0">
-      <div class="col-auto mr-auto">
-        <ul class="list-unstyled">
-          <li>
-            <a href="/">
-              <img class="rg-logo" src="/img/rg-logo.png"/>
-              RyanGraham.ca
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-auto m-2">
-        <ul class="row m-0 list-unstyled">
-          <li class="ml-3">
-            <a href="/About">About</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Blog">Blog</a>
-          </li>
-          <li class="ml-3">
-            <a href="/Projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-  </header>
-  <main> 
-    <div>
-  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/>
+                RyanGraham.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Blog">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main> 
+      <div>
+  <div class="jumbotron p-3 text-white bg-dark">
+    <div class="col-md-8 col-lg-6 px-0">
       <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
       <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
       <a href="#" class="text-white font-weight-bold">Continue reading...</a>
@@ -47,31 +48,48 @@
   <div class="row m-0">
     <h1>Latest Posts</h1>
   </div>
-  <div class="row m-0">
+  <div class="row m-0 mx-n3">
     
-      <article class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3 bg-white p-2 rounded-lg shadow text-center">
-        <h1>
-          <a href="/posts/2020/end-meetings-and-appointments-early/">End meetings and appointments early</a>
-        </h1>
-        
-        <time datetime="2019-12-18T00:00:00.000Z">December 18, 2019</time>
-        <p><p>These days, I have a lot of meetings. In fact, a lot of these meetings butt up against one another, meaning that overflow from one meeting to the next steamrolls the rest of my day.</p></p>
-        <a href="/posts/2020/end-meetings-and-appointments-early/" aria-label="Read more on End meetings and appointments early">Read more</a>
-      </article>
+      <div class="blog-item-container col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <article class="my-3 bg-white p-2 text-center rounded">
+          <h1>
+            <a href="/posts/2020/end-meetings-and-appointments-early/">End meetings and appointments early</a>
+          </h1>
+          
+          <time datetime="2019-12-18T00:00:00.000Z">December 18, 2019</time>
+          <p><p>These days, I have a lot of meetings. In fact, a lot of these meetings butt up against one another, meaning that overflow from one meeting to the next steamrolls the rest of my day.</p></p>
+          <a href="/posts/2020/end-meetings-and-appointments-early/" aria-label="Read more on End meetings and appointments early">Read more</a>
+        </article>
+      </div>
     
-      <article class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3 bg-white p-2 rounded-lg shadow text-center">
-        <h1>
-          <a href="/posts/2020/coping-with-externalized-dependencies/">Coping with externalized dependencies</a>
-        </h1>
-        
-        <time datetime="2018-05-03T00:00:00.000Z">May 3, 2018</time>
-        <p><p>A couple months ago, we started talking about creating a new team that will be focused on doing nothing but building the business layer.</p></p>
-        <a href="/posts/2020/coping-with-externalized-dependencies/" aria-label="Read more on Coping with externalized dependencies">Read more</a>
-      </article>
+      <div class="blog-item-container col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <article class="my-3 bg-white p-2 text-center rounded">
+          <h1>
+            <a href="/posts/2020/coping-with-externalized-dependencies/">Coping with externalized dependencies</a>
+          </h1>
+          
+          <time datetime="2018-05-03T00:00:00.000Z">May 3, 2018</time>
+          <p><p>A couple months ago, we started talking about creating a new team that will be focused on doing nothing but building the business layer.</p></p>
+          <a href="/posts/2020/coping-with-externalized-dependencies/" aria-label="Read more on Coping with externalized dependencies">Read more</a>
+        </article>
+      </div>
+    
+      <div class="blog-item-container col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <article class="my-3 bg-white p-2 text-center rounded">
+          <h1>
+            <a href="/posts/2020/problems-not-solutions/">Problems Not Solutions</a>
+          </h1>
+          
+          <time datetime="2018-02-10T00:00:00.000Z">February 10, 2018</time>
+          <p>we might have just implemented that feature rather than working with the customer to provide a different solution that would do a better job of addressing the underlying problem.</p>
+          <a href="/posts/2020/problems-not-solutions/" aria-label="Read more on Problems Not Solutions">Read more</a>
+        </article>
+      </div>
     
   </div>
 </div>
-  </main> 
-  <footer>Site Footer</footer> 
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
 </body> 
 </html>
