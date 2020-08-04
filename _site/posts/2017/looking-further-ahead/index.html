@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>RyanGraham.ca</title> 
+  <style>body{background:url("/img/cardboard-flat.png");height:100vh;grid-template:auto 1fr auto / auto 1fr auto;margin:0px;background-color:#f5f5f5}.rg-logo{width:2em;height:2em}.three-row-aligned{display:grid;grid-template-rows:auto 1fr auto}header{grid-column:1 / 4}main{grid-column:2 / 3}footer{padding:2rem;text-align:center;grid-column:1 / 4}
+</style>
+  
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+</head> 
+<body>
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/>
+                RyanGraham.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Blog">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/Projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main> 
+      <div class="row">
+  <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+    <article class="article">
+      <h1>Looking Further Ahead</h1> 
+      <time datetime="2017-08-20T00:00:00.000Z">August 20, 2017</time> 
+      <div class="mt-5 bg-white p-2 rounded">
+        <p>Around a month ago, I attended a full week of PMP training in my office. It was fantastic. It gave me a whole lot of new tools for my toolbox.  It helped me identify a number of holes in my game and gave me some tools to get things back on track.</p>
+<p>One tool I gained was a technique to track my progress against my planned progress.  It’s rather easy, and if you’re using agile, it can help you too.</p>
+<p>My assumptions are that you have fixed resources (the scrum team), scope (an estimated backlog), and time (a date by which you need to complete the backlog).  Any change to any of these sides of the iron triange should trigger a reassessment of the other two sides.</p>
+<p>All you need to do is calculate the earned value (EV) and subtract the planned value (PV).  <!-- Excerpt Start -->If the value is positive, you’re ahead of schedule.  If the value is negative, you’re behind schedule.<!-- Excerpt End -->  The magnitude of this value reflects how far or behind you are in the unit of measurement that you’re using.  Let’s try an example.</p>
+<p>You have are running a project to add some functionality to a software suite.  Your product backlog mapped to this version is 250 story points.  Your team started working on April 2nd, and your deadline is October 11th.  Using excel to find the number of working days between these dates, you get 138 days.  The date is currently August 20th, so we’ll use that for our calculations giving us 100 working days of progress which equates to 72% through the project schedule (spent days / total days).  Multiply this progress by the total amount of story points, and you have 181.  Looking at your completed work, you have only completed 165 story point.  That means you’re 16 story points behind schedule.</p>
+<p>But that’s not it!  There’s still more that you can do with this information.</p>
+<p>Do you want to know your anticipated completion date if things continue as they have?  Instead of subtracting your PV from your EV, you divide it (181 / 165) which gives you 1.098.  That is your schedule variance.  This indicates your team is working 9.8% slower than the schedule dictates.  Assuming trends continue, you can multiply this variance by the total number of working days in the schedule in order to figure out the anticipated completion date.  138 days * 1.098 gives you 152 working days, which equates to an anticipated completion date of October 30th (sounds spooky!)</p>
+<p>What does this mean?  Well, nothing on its own.  Any single measurement, while important, isn’t worth panicking over.  It’s really the trends that you should care about.  Maybe your team is working on 16 story points worth of work at the same time (which would indicate you’re not respecting WIP limits).  You shouldn’t run into this if you perform these calculations at the end/start of each sprint, but one way to deal with it is to give your team 50% credit for stories when they’re started, then 100% when it’s completed.  I prefer 0% in my field because a story that’s half-completed is unshippable, therefore isn’t worth anything.</p>
+<p>This is only one of the tools that I’ve gained through the PMP course.  I went on and earned my PMP certification a couple weeks later because I feel strongly about this and used the excuse of studying hard for the exam in order to reinforce the learnings.</p>
+
+      </div>
+    </article>
+  </div>
+</div>
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
+</body> 
+</html>

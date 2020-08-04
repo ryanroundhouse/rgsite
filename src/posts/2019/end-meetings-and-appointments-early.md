@@ -15,14 +15,14 @@ I have done a lot of research on having more effective meetings and one thing th
 
 The one thing in my favour here is that most of my meetings are meetings that I own myself. Since I work with Office 365, it always bothered me that meetings and appointments defaulted to 30 and 60 minute increments by default. I knew there had to be a way to solve this situation, and found that it’s available right through the Outlook 365’s Calendar Options.
 
-<picture>
-  <source media="(min-width:960px)" srcset="/img/blog/end-early-960.png">
-  <source media="(min-width:640px)" srcset="/img/blog/end-early-640.png">
-  <source media="(min-width:480px)" srcset="/img/blog/end-early-480.png">
-  <source media="(min-width:320px)" srcset="/img/blog/end-early-320.png">
-  <source media="(min-width:160px)" srcset="/img/blog/end-early-160.png">
-  <img src="/img/blog/end-early.png" alt="Flowers" style="width:auto;">
-</picture>
+<a href="/img/blog/end-early.png">
+  <picture>
+    <source media="(min-width:480px)" srcset="/img/blog/end-early-480.png">
+    <source media="(min-width:320px)" srcset="/img/blog/end-early-320.png">
+    <source media="(min-width:160px)" srcset="/img/blog/end-early-160.png">
+    <img src="/img/blog/end-early.png" alt="Flowers" style="width:auto;max-width:100%">
+  </picture>
+</a>
 
 To find this setting you click on File > Options, then select the ‘Calendar’ grouping on the left sidebar.
 
