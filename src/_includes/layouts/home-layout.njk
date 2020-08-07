@@ -1,0 +1,59 @@
+{% extends "layouts/base-layout.njk" %}
+
+{% block projects %}
+  <div class="row m-0">
+    <h1>Latest Projects</h1>
+  </div>
+  <div class="row m-0 mx-n3">
+    {% set maxNumberOfProjectsToShow = collections.projects.length if collections.projects.length < 3 else 3 %}
+    {% set fullProjectLength = collections.projects.length - 1 %}
+    {% for i in range(0, maxNumberOfProjectsToShow) %}
+      <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+        <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+          <div>
+            <a class="h1" href="{{ collections.projects[fullProjectLength - i].url | url }}">{{ collections.projects[fullProjectLength - i].data.title }}</a><br/>
+            {# [i].data.title #}
+            <time datetime="{{ collections.projects[fullProjectLength - i].date | dateIso }}">{{ collections.projects[fullProjectLength - i].date | dateReadable }}</time>
+          </div>
+          <div>
+            {% for tech in collections.projects[fullProjectLength - i].data.technologies %}
+              <img src="/img/icons/{{tech}}.png" alt="{{tech}}" title="{{tech}}"/>
+            {% endfor %}
+          </div>
+          <a href="{{ collections.projects[fullProjectLength - i].url | url }}" aria-label="Read more on {{ collections.projects[fullProjectLength - i].data.title }}">See More</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="row m-0">
+    <a href="/tags/projects/" class="ml-auto">View older projects</a>
+  </div>
+{% endblock projects %}
+
+{% block posts %}
+  <div class="row m-0">
+    <h1>Latest Posts</h1>
+  </div>
+  <div class="row m-0 mx-n3">
+    {% set postLength = collections.post.length if collections.post.length < 3 else 3 %}
+    {% set fullPostLength = collections.post.length - 1 %}
+    {% set maxNumberOfPostsToShow = collections.post.length if collections.post.length < 3 else 3 %}
+    {% for i in range(0, maxNumberOfPostsToShow) %}
+      <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+        <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+          <div>
+            <a class="h1" href="{{ collections.post[fullPostLength - i].url | url }}">{{ collections.post[fullPostLength - i].data.title }}</a><br/>
+            <time datetime="{{ collections.post[fullPostLength - i].date | dateIso }}">{{ collections.post[fullPostLength - i].date | dateReadable }}</time>
+          </div>
+          <div class="align-self-end">
+            <p>{% excerpt collections.post[fullPostLength - i] %}</p>
+          </div>
+          <a href="{{ collections.post[fullPostLength - i].url | url }}" aria-label="Read more on {{ collections.post[fullPostLength - i].data.title }}">Read more</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="row m-0">
+    <a href="/tags/post/" class="ml-auto">View older posts</a>
+  </div>
+{% endblock posts %}
