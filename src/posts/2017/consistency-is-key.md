@@ -8,7 +8,7 @@ Recently, with little notice, I had to step back from work for a few days (with 
 
 I put some thought into how this could happen.  I had been expecting the worst.  I talked with a few of the team members about it (after telling them openly just how proud of them I was) and one of the team members said something that led to an ah-hah moment.
 
-> At one point <team member> was considering pulling another JIRA into the sprint.  Then we stopped and said “Well, what would Ryan do if he were here?”.
+<blockquote>At one point <team member> was considering pulling another JIRA into the sprint.  Then we stopped and said “Well, what would Ryan do if he were here?”</blockquote>
 
 Then they proceeded to do exactly what I would have done (they worked with the Product Owner because they were blocked on some of the work with the proposal of dropping out this work in order to pull in an equal number of story points from the top of the backlog).
 

@@ -6,7 +6,7 @@ tags: ['post']
 ---
 The Agile Manifesto was created in 2001 as a philosophy for improving the way software is developed.  It was created by 17 authors and has become wildly popular in the software development eco-system.  If you’ve heard of Scrum or Kanban, those are implementations of Agile.  The authors also agreed on 12 principles.  This article will focus on my favorite one, Simplicity.
 
-> Simplicity–<!-- Excerpt Start -->the art of maximizing the amount of work not done–is essential <!-- Excerpt End -->
+> <i class="fas fa-quote-right"></i> Simplicity–<!-- Excerpt Start -->the art of maximizing the amount of work not done–is essential <!-- Excerpt End -->
 
 While this can be understood directly, I like what’s said if you look at it in reverse.  …the art of minimizing the amount of work being done…  This doesn’t mean to work less.  This means to work on fewer things concurrently.  Work on one feature until it’s done.  In order to do that you can work on one piece of a feature until it’s done.  In order to do that you can work on one piece of one piece of a feature until it’s done, and so on as far down as you want to go.  Adhering to this principle can both provide advantages and remove pitfalls.
 

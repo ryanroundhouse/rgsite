@@ -7,9 +7,17 @@ body {
     background-color: #f5f5f5;
 }
 
-blockquote{
-    margin-left: 15px;
+blockquote {
+    text-indent: -0.5em;
+    margin: 1rem;
 }
+
+// @supports ( hanging-punctuation: first) {
+//     blockquote {
+//         text-indent: 0;
+//         hanging-punctuation: first;
+//     }
+// }
 
 .rg-logo {
     width: 2em;

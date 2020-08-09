@@ -19,7 +19,7 @@ gulp.task('css', function() {
       outputStyle: 'compressed'
     })
     .on('error', sass.logError))
-    .pipe(gulp.dest('./src/_includes/css'));
+    .pipe(gulp.dest('./src/css'));
 });
 
 // gulp.task('cleanImages', function(){
@@ -86,6 +86,15 @@ gulp.task('copyBootstrap', function () {
         .pipe(gulp.dest('./src/css/'));
 });
 
+gulp.task('copyFontAwesome', function () {
+  return gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.min.css')
+      .pipe(gulp.dest('./src/css/'));
+});
+gulp.task('copyFontAwesomeFonts', function () {
+  return gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/*')
+      .pipe(gulp.dest('./src/webfonts/'));
+});
+
 
 /*
   Watch folders for changess
@@ -104,6 +113,8 @@ gulp.task('build', gulp.series(
   'css',
   'js',
   'copyBootstrap',
+  'copyFontAwesome',
+  'copyFontAwesomeFonts',
   'resize'
 ));
 
