@@ -17,11 +17,9 @@ We got a meeting with the customer set up so that I could relay our solution in 
 
 I wasn’t expecting this line of thought, so I asked a few more probing questions and thanked them for this information.  I told them that I understand their needs and I’ll reach out to them soon after I have time to discuss possible solutions with my team.
 
-This is an example that shouldn’t surprise anyone.  A customer asked for some piece of functionality because they see it as the solution to their problem.  Without digging into the reason behind their ask, <!-- Excerpt Start -->we might have just implemented that feature rather than working with the customer to provide a different solution that would do a better job of addressing the underlying problem.<!-- Excerpt End -->
+This is an example that shouldn’t surprise anyone.  A customer asked for some piece of functionality because they see it as the solution to their problem.  Without digging into the reason behind their ask, we might have just implemented that feature rather than working with the customer to provide a different solution that would do a better job of addressing the underlying problem.
 
-By digging deeper, we both win.  They get a better solution to their business problem, and we ensure that solution works best in our system.
-
- 
+<!-- Excerpt Start -->By digging deeper, we both win.  They get a better solution to their business problem, and we ensure that solution works best in our system.<!-- Excerpt End --> 
 
 Now for some retrospection.  How could I have dealt with this situation better?
 

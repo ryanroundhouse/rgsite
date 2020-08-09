@@ -11,7 +11,7 @@
       <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
         <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
           <div>
-            <a class="h1" href="{{ collections.projects[fullProjectLength - i].url | url }}">{{ collections.projects[fullProjectLength - i].data.title }}</a><br/>
+            <a class="h2" href="{{ collections.projects[fullProjectLength - i].url | url }}">{{ collections.projects[fullProjectLength - i].data.title }}</a><br/>
             {# [i].data.title #}
             <time datetime="{{ collections.projects[fullProjectLength - i].date | dateIso }}">{{ collections.projects[fullProjectLength - i].date | dateReadable }}</time>
           </div>
@@ -42,7 +42,7 @@
       <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
         <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
           <div>
-            <a class="h1" href="{{ collections.post[fullPostLength - i].url | url }}">{{ collections.post[fullPostLength - i].data.title }}</a><br/>
+            <a class="h2" href="{{ collections.post[fullPostLength - i].url | url }}">{{ collections.post[fullPostLength - i].data.title }}</a><br/>
             <time datetime="{{ collections.post[fullPostLength - i].date | dateIso }}">{{ collections.post[fullPostLength - i].date | dateReadable }}</time>
           </div>
           <div class="align-self-end">

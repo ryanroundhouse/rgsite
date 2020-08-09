@@ -4,9 +4,8 @@ title: End meetings and appointments early
 date: 2019-12-18
 tags: ['post']
 ---
-<!-- Excerpt Start -->
-These days, I have a lot of meetings. In fact, a lot of these meetings butt up against one another, meaning that overflow from one meeting to the next steamrolls the rest of my day.
-<!-- Excerpt End -->
+<!-- Excerpt Start -->These days, I have a lot of meetings. In fact, a lot of these meetings butt up against one another, meaning that overflow from one meeting to the next steamrolls the rest of my day.<!-- Excerpt End -->
+
 It can start with a 5 minute overrun of the first, which ends up compounding to an extra 45 minutes by the end of the day. Sometimes I’ll try eating my lunch at one of the meetings to make up time that way, but then I end up being less engaged.
 
 Another problem that I’ve noticed is that in running from one meeting to the next, I don’t take the time to reflect on what was discussed and what action items to take away. This ends up manifesting in either missing the addition of action items to my to-do list. My brain is built to create process and solve puzzles, not to maintain the integrity of an ephemeral to-do list.

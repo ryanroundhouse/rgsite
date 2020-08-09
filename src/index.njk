@@ -9,9 +9,9 @@ pagination:
 <div>
   <div class="jumbotron p-3 text-white bg-dark">
     <div class="col-md-8 col-lg-6 px-0">
-      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-      <a href="#" class="text-white font-weight-bold">Continue reading...</a>
+      <h1 class="display-4 font-italic">{{collections.post[collections.post.length - 1].data.title}}</h1>
+      <p class="lead my-3">{% excerpt collections.post[collections.post.length - 1] %}</p>
+      <a href="{{ collections.post[collections.post.length - 1].url | url }}" aria-label="Read more on {{ collections.post[collections.post.length - 1].data.title }}">Read more</a>
     </div>
   </div>
 </div>
