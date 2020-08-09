@@ -19,4 +19,11 @@ The last benefit I found was that it encourages you to learn more tech stuff wor
 For downsides, you're on your own for everything from the ground up.  For example, the styling of this website took many hours because themes aren't as common in raw CSS as they are built into WordPress or other CMSes.
 Well... Not fully on your own.  I'm using a framework called 11ty to generate the site.  I've been using nunjucks as the template language for a lot of it too, so I really mean on your own for making it look better than a 1995 Geocities page.
 
-Would I recommend an SSG?  It depends.  If you want to geek out on some basic HTML, CSS, and other stuff like that, it's a good choice.  If you want full control of the look and feel
+Would I recommend an SSG?  It depends.  
+If you want to geek out on some basic HTML, CSS, and other stuff like that, it's a good choice.  
+If you want full control of the look and feel and expand functionality to your own custom built stuff, it's a good choice.
+If you want a WYSIWYG helper, stay away.
+If you want to get to something that looks great shortly after starting, stay away.
+
+Cheers,
+-RG!
