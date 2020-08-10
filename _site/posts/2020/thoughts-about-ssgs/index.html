@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>RyanGraham.ca</title> 
+  <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head> 
+<body>
+  <div class="container">
+    <header class="row m-0">
+        <div class="col-auto mr-auto my-auto pl-0">
+          <ul class="list-unstyled my-2">
+            <li>
+              <a class="logo" href="/">
+                <img class="rg-logo" src="/img/rg-logo.png"/><span class="h2 rg-logo-text">RyanGraham.ca</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-auto my-auto pl-0">
+          <ul class="row m-0 list-unstyled">
+            <li class="ml-3">
+              <a href="/About">About</a>
+            </li>
+            <li class="ml-3">
+              <a href="/tags/post/">Blog</a>
+            </li>
+            <li class="ml-3">
+              <a href="/tags/projects/">Projects</a>
+            </li>
+          </ul>
+        </div>
+    </header>
+    <main>
+      
+        <div class="row">
+  <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2">
+    <article class="article">
+      <h1>Thoughts about SSGs</h1> 
+      <time datetime="2020-08-09T00:00:00.000Z">August 9, 2020</time> 
+      <div class="mt-5 bg-white p-2 rounded">
+        <p>I had been meaning to overhaul my WordPress website for a while now.  I felt like it didn't give me deep enough control over the look, feel, and layout without dumping a bunch of time into customizing Wordpress themes. The time spent there wouldn't help me gain a deeper understanding of the technologies overall but rather information on how Wordpress does things.</p>
+<!-- Excerpt Start -->
+<p>I had been hearing a lot about static site generators and decided it might be worth learning about what they're all about.</p>
+<!-- Excerpt End -->
+<p>This website is the first website overhaul I've done for a few years now.  I selected <a href="https://www.11ty.dev/">11ty</a> as my static site generator framework of choice, but I heard <a href="https://jekyllrb.com/">Jekyll</a> is another popular option that is leveraged by github pages.  I've learned a lot about static site generators in general.</p>
+<p>The benefits are primarily speed and cost to the end user.  The idea is that a lot of websites these days are bloated with tons of JavaScript both in terms of download size as well as processing/rendering power for running it all.  This cost occurs on the user's device when they access your site.  When most of the world is browsing the web on their cellphones these days, that kind of thing matters.
+With static site generators all of that work is handled at compile time which results in raw html and CSS as the output.  One thing to note, however, is that it's easy to lose that benefit since there's nothing that actually stops you from including a ton of dynamic JavaScript.  You still have to try to keep it low-cost.</p>
+<p>Another benefit I've found is pairing your static site with other services.  There is a company called <a href="https://www.netlify.com/">Netlify</a> which can automatically pull from your <a href="https://github.com/ryanroundhouse/rgsite">GitHub repository</a> that stores your SSG code, build it, and host it automatically for free.
+I'm using this service now to host my website.  It was very easy and straightforward to get it all working together.</p>
+<p>The last benefit I found was that it encourages you to learn more tech stuff workout the support of other frameworks and libraries.  When I was learning <a href="https://angular.io/">angular</a> and <a href="https://nodejs.org/">node.js</a> I learned a lot about how these technologies work but they manage a lot of functionality and packaging on your behalf.  This was a great opportunity for me to remove the training wheels in order to accomplish those same tasks myself.</p>
+<p>For downsides, when compared to Wordpress or another CMS, it takes a loooong time to go from new site to beautiful new site.  One of the things that <a href="https://www.11ty.dev/">11ty</a> boasts is how quick and easy it is to generate a website, which is true, but is only useful as far as you want a 1995 <a href="https://en.wikipedia.org/wiki/Yahoo!_GeoCities">geocities</a> fan-ring looking site.  I'm sure there's a nostalgia market for that, but it's not what most people are looking for.</p>
+<p>Would I recommend you build your site using a static site generator?  It depends.</p>
+<ul>
+<li><i class="fas fa-check"></i> If you want to geek out on some basic HTML, CSS, and other stuff like that, it's a good choice.</li>
+<li><i class="fas fa-check"></i> If you want full control of the look and feel and expand functionality to your own custom built stuff, it's a good choice.</li>
+<li><i class="fas fa-times"></i> If you want a <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> helper, stay away.</li>
+<li><i class="fas fa-times"></i> If you want to get to something that looks great shortly after starting, stay away.</li>
+</ul>
+<p>Cheers,
+-RG!</p>
+
+      </div>
+    </article>
+  </div>
+</div>
+      
+      
+      
+      
+      
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
+</body> 
+</html>
