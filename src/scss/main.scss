@@ -17,19 +17,32 @@ blockquote {
     font-family: Roboto;
     src: url('../webfonts/Roboto-Regular.ttf');
 }
+@font-face {
+    font-family: PTSerif;
+    src: url('../webfonts/PTSerif-Regular.ttf');
+}
 
 @font-face {
     font-family: Roboto-bold;
     src: url('../webfonts/Roboto-Bold.ttf');
 }
 
+// p{
+//     font-family: PTSerif;
+//     font-size: 20px;
+//     line-height: 30px;
+//     color:#343434;
+// }
+
 p{
-    font-family: Roboto;
-    font-size: 16pt;
+    font-size:20px;
+    line-height:30px;
+    margin:0 0 20px;
+    font-family:"PTSerif",georgia;
 }
 
 ol, ul{
-    font-family: Roboto;
+    font-family: PTSerif;
     font-size: 16pt;
 }
 
@@ -43,19 +56,19 @@ ul {
 }
 
 a{
-    font-family: Roboto;
+    font-family: PTSerif;
     font-size: 16pt;
     color: #F78D1E;
     text-decoration: none;
 }
 
 time{
-    font-family: Roboto;
+    font-family: PTSerif;
     font-size: 12pt;
 }
 
 .lead{
-    font-family: Roboto;
+    font-family: PTSerif;
 }
 
 .h1, h1{
@@ -66,7 +79,7 @@ time{
 }
 
 .h2, h2{
-    font-family: Roboto;
+    font-family: PTSerif;
     font-size: 24pt;
     
 }
@@ -81,12 +94,30 @@ time{
     width: 30px;
 }
 
-// @supports ( hanging-punctuation: first) {
-//     blockquote {
-//         text-indent: 0;
-//         hanging-punctuation: first;
-//     }
-// }
+
+// small screen styles
+
+@media (max-width:767px){
+    p{
+        font-size:18px;
+        line-height:26px;
+        margin:0 20px 20px;
+    }
+    ol, ul{
+        font-family: PTSerif;
+        font-size: 18px;
+        line-height:26px;
+    }
+    a{
+        font-family: PTSerif;
+        font-size: 18px;
+        line-height:26px;
+        color: #F78D1E;
+        text-decoration: none;
+    }
+}
+
+// Layout styles
 
 .rg-logo {
     width: 2em;
