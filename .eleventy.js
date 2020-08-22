@@ -1,4 +1,5 @@
 const moment = require('moment');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
  
 moment.locale('en');
 
@@ -19,6 +20,9 @@ module.exports = function (eleventyConfig) {
       // returns Promise
       return Image(src, options);
     });
+
+    // add rss plugin
+    eleventyConfig.addPlugin(pluginRss);
 
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
     

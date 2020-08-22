@@ -31,5 +31,8 @@
     "node-sass-promise": "^1.0.0",
     "rename": "^1.0.4",
     "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.0.9"
   }
 }
