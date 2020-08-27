@@ -6,7 +6,7 @@ layout: /layouts/base-layout.njk
     <article class="article">
       <h1>{{ title }}</h1> 
       <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time> 
-      <div class="mt-5 bg-white py-md-2 px-md-5 rounded">
+      <div class="mt-5 bg-white py-3 px-md-5 rounded">
         {{ content | safe }}
       </div>
     </article>
