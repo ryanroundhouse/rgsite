@@ -10,8 +10,9 @@
     {% for i in range(0, maxNumberOfProjectsToShow) %}
       <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
         <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+          <a class="wholeDivLink" href="{{ collections.projects[fullProjectLength - i].url | url }}" aria-label="Read more on {{ collections.projects[fullProjectLength - i].data.title }}"></a>
           <div>
-            <a class="h2" href="{{ collections.projects[fullProjectLength - i].url | url }}">{{ collections.projects[fullProjectLength - i].data.title }}</a><br/>
+            <h2>{{ collections.projects[fullProjectLength - i].data.title }}</h2><br/>
             {# [i].data.title #}
             <time datetime="{{ collections.projects[fullProjectLength - i].date | dateIso }}">{{ collections.projects[fullProjectLength - i].date | dateReadable }}</time>
           </div>
@@ -20,7 +21,6 @@
               <img src="/img/icons/{{tech}}.png" alt="{{tech}}" title="{{tech}}"/>
             {% endfor %}
           </div>
-          <a href="{{ collections.projects[fullProjectLength - i].url | url }}" aria-label="Read more on {{ collections.projects[fullProjectLength - i].data.title }}">See More</a>
         </div>
       </article>
     {% endfor %}
@@ -41,14 +41,14 @@
     {% for i in range(0, maxNumberOfPostsToShow) %}
       <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
         <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+          <a class="wholeDivLink" href="{{ collections.post[fullPostLength - i].url | url }}" aria-label="Read more on {{ collections.post[fullPostLength - i].data.title }}"></a>
           <div>
-            <a class="h2" href="{{ collections.post[fullPostLength - i].url | url }}">{{ collections.post[fullPostLength - i].data.title }}</a><br/>
-            <time datetime="{{ collections.post[fullPostLength - i].date | dateIso }}">{{ collections.post[fullPostLength - i].date | dateReadable }}</time>
-          </div>
-          <div class="align-self-end">
+            <h2>{{ collections.post[fullPostLength - i].data.title }}</h2><br/>
             <p>{% excerpt collections.post[fullPostLength - i] %}</p>
           </div>
-          <a href="{{ collections.post[fullPostLength - i].url | url }}" aria-label="Read more on {{ collections.post[fullPostLength - i].data.title }}">Read more</a>
+          <div class="align-self-end">
+            <time datetime="{{ collections.post[fullPostLength - i].date | dateIso }}">{{ collections.post[fullPostLength - i].date | dateReadable }}</time>
+          </div>
         </div>
       </article>
     {% endfor %}
