@@ -84,6 +84,12 @@ time{
     
 }
 
+.h3, h3{
+    font-family: PTSerif;
+    font-size: 22pt;
+    
+}
+
 .rg-logo-text{
     vertical-align: middle;
     margin-left: 1rem;
@@ -96,12 +102,33 @@ time{
 
 
 // small screen styles
-
 @media (max-width:767px){
     p{
         font-size:18px;
         line-height:26px;
         margin:0 20px 20px;
+    }
+    ol, ul{
+        font-family: PTSerif;
+        font-size: 18px;
+        line-height:26px;
+    }
+    a{
+        font-family: PTSerif;
+        font-size: 18px;
+        line-height:26px;
+        color: #F78D1E;
+        text-decoration: none;
+    }
+    h3,.h3,h2,.h2{
+        margin: 0 20px 20px;
+    }
+}
+
+@media (max-width:320px){
+    p{
+        font-size:18px;
+        line-height:26px;
     }
     ol, ul{
         font-family: PTSerif;
