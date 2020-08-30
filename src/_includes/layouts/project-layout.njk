@@ -1,0 +1,19 @@
+---
+layout: /layouts/base-layout.njk
+---
+<div class="row">
+  <div class="col-md-10 col-lg-10 offset-lg-1 offset-md-1">
+    <article class="article">
+      <h1>{{ title }}</h1> 
+      <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+      <ul>
+        {% for tech in technologies %}
+          <img src="/img/icons/{{tech}}.png" alt="{{tech}}" title="{{tech}}"/>
+        {% endfor %}
+      </ul>
+      <div class="mt-5 bg-white py-3 px-md-5 rounded">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+</div>

@@ -26,10 +26,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
     
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addPassthroughCopy("src/webfonts");
-    eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy("./src/css");
+    eleventyConfig.addPassthroughCopy("./src/img");
+    eleventyConfig.addPassthroughCopy("./src/webfonts");
+    eleventyConfig.addPassthroughCopy("./favicon.ico");
 
 
     return {

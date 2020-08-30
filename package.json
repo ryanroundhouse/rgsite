@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp build & npx @11ty/eleventy --serve",
+    "start": "gulp build && npx @11ty/eleventy --serve",
     "build": "gulp build && npx @11ty/eleventy",
     "debug": "gulp build & DEBUG=* npx @11ty/eleventy"
   },
