@@ -19,7 +19,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-auto my-auto pl-0">
+        <nav class="col-auto my-auto pl-0">
           <ul class="row m-0 list-unstyled">
             <li class="ml-3">
               <a href="/About">About</a>
@@ -31,9 +31,9 @@
               <a href="/tags/projects/">Projects</a>
             </li>
           </ul>
-        </div>
+        </nav>
     </header>
-    <main>
+    <main role="main">
       {% block contents %}
         {{ content | safe }}
       {% endblock contents %}
