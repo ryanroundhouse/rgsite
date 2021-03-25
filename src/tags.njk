@@ -26,7 +26,7 @@ permalink: /tags/{{ tag }}/
             {% endfor %}
           {% endif %}
           {% if '/post' in page.url %}<p>{% excerpt post %}</p>{% endif %}
-          {% if '/process' in page.url %}<p>{% excerpt process %}</p>{% endif %}
+          {% if '/process' in page.url %}<p>{% excerpt post %}</p>{% endif %}
         </div>
         <div class="align-self-end">
           <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
