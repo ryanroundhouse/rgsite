@@ -3,6 +3,7 @@ title: Bouncing Balls for Babies 0.5
 date: 2014-03-10
 technologies: ['xna', 'csharp']
 ---
+
 <a href="/img/blog/bbfb-xna-screenshot.png">
   <picture>
     <source media="(min-width:160px)" srcset="/img/blog/bbfb-xna-screenshot-160.png">
@@ -10,11 +11,11 @@ technologies: ['xna', 'csharp']
   </picture>
 </a>
 
-This is a game I developed for my son.  I wanted a game with images that he liked and would recognize as well as fun sound effects and gameplay.
+This is a game I developed for my son. I wanted a game with images that he liked and would recognize as well as fun sound effects and gameplay.
 
 Download package
 
-When you launch the game, you’re presented with 3 balls.  You can click or touch any of the balls to make the ball bounce around the walls and off other balls and squish bugs.  The bug squish count is displayed at the top left of the screen.
+When you launch the game, you’re presented with 3 balls. You can click or touch any of the balls to make the ball bounce around the walls and off other balls and squish bugs. The bug squish count is displayed at the top left of the screen.
 
 Features:
 
