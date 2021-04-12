@@ -7,7 +7,7 @@ pagination:
 permalink: /project-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
 ---
 <h1 class="mb-4 mt-3">Projects</h1>
-{% if pagination.pageNumber > 0 %}<h2 class="mb-4 mt-3">Page {{ pagination.pageNumber + 1}}</h2>{% endif %}
+<h2 class="mb-4 mt-3">Page {{ pagination.pageNumber + 1}}</h2>
 
 {% block content %}
     <div class="row m-0 mx-n3">

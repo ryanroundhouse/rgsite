@@ -29,6 +29,8 @@ async function getAllProjects() {
               title,
               slug,
               description,
+              github,
+              date,
               technologies{
                 name,
                 logo{
@@ -71,15 +73,21 @@ async function getAllProjects() {
   }
 
   // format blogposts objects
-  const projectsFormatted = projects.map((item) => {
-    return {
-      id: item.id,
-      title: item.title,
-      description: item.description,
-      technologies: item.technologies,
-      slug: item.slug,
-    };
-  });
+  const projectsFormatted = projects
+    .map((item) => {
+      return {
+        id: item.id,
+        title: item.title,
+        description: item.description,
+        technologies: item.technologies,
+        github: item.github,
+        date: item.date,
+        slug: item.slug,
+      };
+    })
+    .sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
 
   // return formatted blogposts
   return projectsFormatted;
