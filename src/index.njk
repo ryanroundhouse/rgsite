@@ -1,19 +1,14 @@
 ---
 layout: layouts/home-layout.njk
-pagination:
-  data: collections.post
-  size: 3
-  reverse: true
-  alias: posts
 ---
 <div>
 {{project | debugger}}
   <div class="jumbotron p-3 text-white bg-dark">
     <div class="col-md-8 col-lg-6 px-0">
-      <a class="wholeDivLink" href="{{ collections.post[collections.post.length - 1].url | url }}" aria-label="Read more on {{ collections.post[collections.post.length - 1].data.title }}"></a>
-      <h1 class="display-4 font-italic">{{collections.post[collections.post.length - 1].data.title}}</h1>
-      <p class="lead my-3">{% excerpt collections.post[collections.post.length - 1] %}</p>
-      <a href="{{ collections.post[collections.post.length - 1].url | url }}" aria-label="Read more on {{ collections.post[collections.post.length - 1].data.title }}">Read more</a>
+      <a class="wholeDivLink" href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}"></a>
+      <h1 class="display-4 font-italic">{{posts[0].title}}</h1>
+      <p class="lead my-3">{{ posts[0].excerpt }}</p>
+      <a href="/post/{{ post[0].slug }}" aria-label="Read more on {{ posts[0].title }}">Read more</a>
     </div>
   </div>
 </div>
