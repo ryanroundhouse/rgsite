@@ -13,7 +13,7 @@ permalink: post/{{ post.slug }}/index.html
     <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
 
     <div class="mt-4 bg-white py-3 px-md-5 rounded">
-      <img src="{{post.image.url}}" alt="{{post.image.alternativeText}}" title="{{post.image.alternativeText}}"/>
+      <img src="{{post.image.url}}" alt="{{post.image.alternativeText}}" title="{{post.image.alternativeText}}" class="mw-100"/>
       {% markdown %}{{ post.content | safe }}{% endmarkdown %}
     </div>
 

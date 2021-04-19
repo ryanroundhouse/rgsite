@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('excerpt', (article) => extractExcerpt(article));
 
   eleventyConfig.addPassthroughCopy('./src/css');
+  eleventyConfig.addPassthroughCopy('./src/js');
   eleventyConfig.addPassthroughCopy('./src/img');
   eleventyConfig.addPassthroughCopy('./src/webfonts');
   eleventyConfig.addPassthroughCopy('./favicon.ico');

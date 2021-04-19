@@ -1,0 +1,1 @@
+var nav=document.querySelector(".nav");function fixNav(){window.scrollY>nav.offsetHeight+60?nav.classList.add("active"):nav.classList.remove("active")}window.addEventListener("scroll",fixNav);

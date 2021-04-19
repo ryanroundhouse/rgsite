@@ -9,8 +9,8 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head> 
 <body>
-  <div class="container">
-    <header class="row m-0">
+  <header class="nav">
+    <div class="container">
         <div class="col-auto mr-auto my-auto pl-0">
           <ul class="list-unstyled my-2">
             <li>
@@ -35,7 +35,9 @@
             </li>
           </ul>
         </nav>
-    </header>
+    </div>
+  </header>
+  <div class="container">
     <main role="main">
       {% block contents %}
         {{ content | safe }}
@@ -53,5 +55,6 @@
       <a href="https://www.linkedin.com/in/ryandouglasgraham/"><i class="fab fa-linkedin"></i></a>
     </footer> 
   </div>
+  <script src="/js/stickyheader.js"></script>
 </body> 
 </html>
