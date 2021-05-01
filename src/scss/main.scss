@@ -1,10 +1,11 @@
+@use 'config';
+@use 'fonts';
+
 body {
-  // display: grid;
-  //background: url('/img/cardboard-flat.png');
   height: 100vh;
   grid-template: auto 1fr auto / auto 1fr auto;
   margin: 0px;
-  background-color: #eff1ed;
+  background-color: config.$page-background
 }
 
 blockquote {
@@ -12,27 +13,6 @@ blockquote {
   margin: 1rem;
   font-style: italic;
 }
-
-@font-face {
-  font-family: Roboto;
-  src: url('../webfonts/Roboto-Regular.ttf');
-}
-@font-face {
-  font-family: PTSerif;
-  src: url('../webfonts/PTSerif-Regular.ttf');
-}
-
-@font-face {
-  font-family: Roboto-bold;
-  src: url('../webfonts/Roboto-Bold.ttf');
-}
-
-// p{
-//     font-family: PTSerif;
-//     font-size: 20px;
-//     line-height: 30px;
-//     color:#343434;
-// }
 
 p {
   font-size: 20px;
@@ -47,11 +27,6 @@ ul {
   font-size: 16pt;
 }
 
-a:hover {
-  color: #f78d1e;
-  text-decoration: none;
-}
-
 ul {
   list-style-type: none;
 }
@@ -61,6 +36,11 @@ a {
   font-size: 16pt;
   color: #f78d1e;
   text-decoration: none;
+
+  &:hover{
+    color: darken(#f78d1e, 10%);
+    text-decoration: none;
+  }
 }
 
 time {
@@ -207,7 +187,4 @@ footer {
 
 .nav.active {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.container {
 }

@@ -1,8 +1,7 @@
 'use strict';
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
 const responsive = require('gulp-responsive');
 const del = require('del');
 
@@ -15,10 +14,10 @@ gulp.task('cleanOutput', function () {
 */
 gulp.task('css', function () {
   return gulp
-    .src('./src/scss/*.scss')
+    .src('./src/scss/**/*.scss')
     .pipe(
       sass({
-        outputStyle: 'compressed',
+        outputStyle: 'compressed'
       }).on('error', sass.logError)
     )
     .pipe(gulp.dest('./src/css'));
