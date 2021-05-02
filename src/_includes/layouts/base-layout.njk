@@ -37,24 +37,14 @@
         </nav>
     </div>
   </header>
-  <div class="container">
-    <main role="main">
-      {% block contents %}
-        {{ content | safe }}
-      {% endblock contents %}
-      {% block projects %}
-      {% endblock projects %}
-      {% block posts %}
-      {% endblock posts %}
-      {% block process %}
-      {% endblock process %}
-    </main> 
-    <footer>
-      <a href="https://twitter.com/RyanRoundhouse"><i class="fab fa-twitter"></i></a>
-      <a href="https://github.com/ryanroundhouse/"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ryandouglasgraham/"><i class="fab fa-linkedin"></i></a>
-    </footer> 
-  </div>
+  <main role="main">
+      {{ content | safe }}
+  </main> 
+  <footer>
+    <a href="https://twitter.com/RyanRoundhouse"><i class="fab fa-twitter mx-3"></i></a>
+    <a href="https://github.com/ryanroundhouse/"><i class="fab fa-github mx-3"></i></a>
+    <a href="https://www.linkedin.com/in/ryandouglasgraham/"><i class="fab fa-linkedin mx-3"></i></a>
+  </footer>
   <script src="/js/stickyheader.js"></script>
 </body> 
 </html>
