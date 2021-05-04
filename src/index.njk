@@ -2,89 +2,101 @@
 layout: layouts/base-layout.njk
 ---
 
-<div class="jumbotron p-3 text-white bg-dark my-5 py-5">
-  <div class="col-md-8 col-lg-6 px-0">
-    <a class="wholeDivLink" href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}"></a>
-    <h1 class="display-4 font-italic">{{posts[0].title}}</h1>
-    <p class="lead my-3">{{ posts[0].excerpt }}</p>
-    <a href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}">Read more</a>
+<div class="jumbotron p-3 text-white bg-dark mb-5 py-5">
+  <div class="container">
+    <div class="col-md-8 col-lg-6 px-0">
+      <a class="wholeDivLink" href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}"></a>
+      <h1 class="display-4 font-italic">{{posts[0].title}}</h1>
+      <p class="lead my-3">{{ posts[0].excerpt }}</p>
+      <a href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}">Read more</a>
+    </div>
   </div>
 </div>
 
-<div class="row container">
-  <div class="row">
-    <h1>Latest Projects</h1>
-  </div>
-  <div class="row mx-auto p-0">
-    {% set maxNumberOfProjectsToShow = projects.length if projects.length < 3 else 3 %}
-    {% for i in range(0, maxNumberOfProjectsToShow) %}
-      <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
-        <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
-          <a class="wholeDivLink" href="/project/{{ projects[i].slug }}/" aria-label="Read more on {{ projects[i].title }}"></a>
-          <div>
-            <h2>{{ projects[i].title }}</h2><br/>
-            <time datetime="{{ projects[i].date | dateIso }}">{{ projects[i].date | dateReadable }}</time>
+<div class="my-5">
+  <div class="my-5 container vert">
+    <div class="my-5">
+      <h1>Latest Projects</h1>
+    </div>
+    <div class="articlestream">
+      {% set maxNumberOfProjectsToShow = projects.length if projects.length < 3 else 3 %}
+      {% for i in range(0, maxNumberOfProjectsToShow) %}
+        <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+          <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+            <a class="wholeDivLink" href="/project/{{ projects[i].slug }}/" aria-label="Read more on {{ projects[i].title }}"></a>
+            <div>
+              <h2>{{ projects[i].title }}</h2><br/>
+              <time datetime="{{ projects[i].date | dateIso }}">{{ projects[i].date | dateReadable }}</time>
+            </div>
+            <div>
+              {% for tech in projects[i].technologies %}
+                <img src="{{tech.logo.url}}" alt="{{tech.logo.alternativeText}}" title="{{tech.logo.alternativeText}}"/>
+              {% endfor %}
+            </div>
           </div>
-          <div>
-            {% for tech in projects[i].technologies %}
-              <img src="{{tech.logo.url}}" alt="{{tech.logo.alternativeText}}" title="{{tech.logo.alternativeText}}"/>
-            {% endfor %}
+        </article>
+      {% endfor %}
+    </div>
+    <div class="right mb-5">
+      <a href="/project-list/" class="ml-auto">View older projects</a>
+    </div>
+  </div>
+</div>
+
+<div class="my-5 dark-background">
+  <div class="my-5 container vert">
+    <div class="my-5 text-white">
+      <h1>Latest Posts</h1>
+    </div>
+    <div class="articlestream">
+      {% set maxNumberOfPostsToShow = posts.length if posts.length < 3 else 3 %}
+      {% for i in range(0, maxNumberOfPostsToShow) %}
+        <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+          <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+            <a class="wholeDivLink" href="/post/{{ posts[i].slug }}/" aria-label="Read more on {{ posts[i].title }}"></a>
+            <div>
+              <h2>{{ posts[i].title }}</h2><br/>
+              <p>{{ posts[i].excerpt }}</p>
+            </div>
+            <div class="align-self-end">
+              <time datetime="{{ posts[i].date | dateIso }}">{{ posts[i].date | dateReadable }}</time>
+            </div>
           </div>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-  <div class="row">
-    <a href="/project-list/" class="ml-auto">View older projects</a>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="right mb-5">
+      <a href="/post-list/" class="ml-auto">View older posts</a>
+    </div>
   </div>
 </div>
 
-<div class="row container">
-  <h1>Latest Posts</h1>
-</div>
-<div class="row container mx-auto p-0">
-  {% set maxNumberOfPostsToShow = posts.length if posts.length < 3 else 3 %}
-  {% for i in range(0, maxNumberOfPostsToShow) %}
-    <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
-      <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
-        <a class="wholeDivLink" href="/post/{{ posts[i].slug }}/" aria-label="Read more on {{ posts[i].title }}"></a>
-        <div>
-          <h2>{{ posts[i].title }}</h2><br/>
-          <p>{{ posts[i].excerpt }}</p>
-        </div>
-        <div class="align-self-end">
-          <time datetime="{{ posts[i].date | dateIso }}">{{ posts[i].date | dateReadable }}</time>
-        </div>
-      </div>
-    </article>
-  {% endfor %}
-</div>
-<div class="row container">
-  <a href="/post-list/" class="ml-auto">View older posts</a>
-</div>
-
-<div class="row container">
-  <h1>Latest Process</h1>
-</div>
-<div class="row container mx-auto p-0">
-  {% set processLength = collections.process.length if collections.process.length < 3 else 3 %}
-  {% set fullProcessLength = collections.process.length - 1 %}
-  {% set maxNumberOfProcessToShow = collections.process.length if collections.process.length < 3 else 3 %}
-  {% for i in range(0, maxNumberOfProcessToShow) %}
-    <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
-      <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
-        <a class="wholeDivLink" href="{{ collections.process[fullProcessLength - i].url | url }}" aria-label="Read more on {{ collections.process[fullProcessLength - i].data.title }}"></a>
-        <div>
-          <h2>{{ collections.process[fullProcessLength - i].data.title }}</h2><br/>
-          <p>{% excerpt collections.process[fullProcessLength - i] %}</p>
-        </div>
-        <div class="align-self-end">
-          <time datetime="{{ collections.process[fullProcessLength - i].date | dateIso }}">{{ collections.process[fullProcessLength - i].date | dateReadable }}</time>
-        </div>
-      </div>
-    </article>
-  {% endfor %}
-</div>
-<div class="row container">
-  <a href="/tags/process/" class="ml-auto">View older process</a>
+<div class="mt-5">
+  <div class="my-5 container vert">
+    <div class="my-5">
+      <h1>Latest Process</h1>
+    </div>
+    <div class="articlestream">
+      {% set processLength = collections.process.length if collections.process.length < 3 else 3 %}
+      {% set fullProcessLength = collections.process.length - 1 %}
+      {% set maxNumberOfProcessToShow = collections.process.length if collections.process.length < 3 else 3 %}
+      {% for i in range(0, maxNumberOfProcessToShow) %}
+        <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+          <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
+            <a class="wholeDivLink" href="{{ collections.process[fullProcessLength - i].url | url }}" aria-label="Read more on {{ collections.process[fullProcessLength - i].data.title }}"></a>
+            <div>
+              <h2>{{ collections.process[fullProcessLength - i].data.title }}</h2><br/>
+              <p>{% excerpt collections.process[fullProcessLength - i] %}</p>
+            </div>
+            <div class="align-self-end">
+              <time datetime="{{ collections.process[fullProcessLength - i].date | dateIso }}">{{ collections.process[fullProcessLength - i].date | dateReadable }}</time>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="right mb-5">
+      <a href="/tags/process/" class="ml-auto">View older process</a>
+    </div>
+  </div>
 </div>
