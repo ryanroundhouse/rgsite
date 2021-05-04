@@ -1,11 +1,14 @@
 @use 'config';
 @use 'fonts';
 
+* {
+  font-family: config.$font-family;
+}
+
 body {
   height: 100vh;
-  grid-template: auto 1fr auto / auto 1fr auto;
   margin: 0px;
-  background-color: config.$page-background
+  background-color: config.$page-background;
 }
 
 blockquote {
@@ -18,12 +21,10 @@ p {
   font-size: 20px;
   line-height: 30px;
   margin: 15px 0 20px;
-  font-family: 'PTSerif', georgia;
 }
 
 ol,
 ul {
-  font-family: PTSerif;
   font-size: 16pt;
 }
 
@@ -32,24 +33,18 @@ ul {
 }
 
 a {
-  font-family: PTSerif;
   font-size: 16pt;
   color: #f78d1e;
   text-decoration: none;
 
-  &:hover{
+  &:hover {
     color: darken(#f78d1e, 10%);
     text-decoration: none;
   }
 }
 
 time {
-  font-family: PTSerif;
   font-size: 12pt;
-}
-
-.lead {
-  font-family: PTSerif;
 }
 
 .h1,
@@ -62,13 +57,11 @@ h1 {
 
 .h2,
 h2 {
-  font-family: PTSerif;
   font-size: 24pt;
 }
 
 .h3,
 h3 {
-  font-family: PTSerif;
   font-size: 22pt;
 }
 
@@ -88,11 +81,23 @@ a.wholeDivLink {
   margin-left: 1rem;
 }
 
-.fa-twitter,
-.fa-linkedin,
-.fa-github {
-  font-size: 30px;
-  width: 30px;
+@media (min-width: 767px) {
+  // sticky nav
+  .nav.active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  main {
+    margin-top: 48px;
+  }
 }
 
 // small screen styles
@@ -104,12 +109,10 @@ a.wholeDivLink {
   }
   ol,
   ul {
-    font-family: PTSerif;
     font-size: 18px;
     line-height: 26px;
   }
   a {
-    font-family: PTSerif;
     font-size: 18px;
     line-height: 26px;
     color: #f78d1e;
@@ -130,12 +133,10 @@ a.wholeDivLink {
   }
   ol,
   ul {
-    font-family: PTSerif;
     font-size: 18px;
     line-height: 26px;
   }
   a {
-    font-family: PTSerif;
     font-size: 18px;
     line-height: 26px;
     color: #f78d1e;
@@ -150,41 +151,61 @@ a.wholeDivLink {
   height: 2em;
 }
 
-.three-row-aligned {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-header {
-  grid-column: 1 / 4;
-}
-
-main {
-  margin-top: 60px;
-  grid-column: 2 / 3;
-}
-
-footer {
-  padding: 2rem;
-  text-align: center;
-  grid-column: 1 / 4;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 // sticky header
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
+  height: 48px;
+  background-color: config.$page-background;
 }
 
-.nav .container {
+.container {
   display: flex;
   justify-content: space-between;
-  background-color: #eff1ed;
 }
 
-.nav.active {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.vert {
+  flex-direction: column;
+}
+
+.articlestream {
+  display: flex;
+  margin-left: -14px;
+  margin-right: -14px;
+  flex-wrap: wrap;
+}
+
+.dark-background {
+  background-color: config.$page-altbackground;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.jumbotron {
+  border-radius: 0px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
+  font-size: 30px;
+  width: 30px;
 }
