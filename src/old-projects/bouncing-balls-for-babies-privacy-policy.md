@@ -2,10 +2,12 @@
 title: Bouncing Balls for Babies - Privacy policy
 date: 2020-10-28
 eleventyExcludeFromCollections: true
+layout: layouts/project-layout.njk
 ---
 
-#App Privacy Policy
-###Last updated May 5, 2021
+# Bouncing Balls for Babies Privacy Policy
+
+### Last updated May 5, 2021
 
 RyanGraham.ca (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application (the “Application”). Please read this Privacy Policy carefully. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.
 
