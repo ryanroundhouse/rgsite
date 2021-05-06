@@ -8,12 +8,12 @@ pagination:
 permalink: post/{{ post.slug }}/index.html
 ---
 {% block content %}
-
-    <div class="mt-4 bg-white py-3 px-md-5 rounded">
-      <h1 class="text-center">{{ post.title }}</h1>
-      <p><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></p>
-      <img src="{{post.image.url}}" alt="{{post.image.alternativeText}}" title="{{post.image.alternativeText}}" class="mw-100"/>
-      {% markdown %}{{ post.content | safe }}{% endmarkdown %}
-    </div>
-
+<div class="container">
+  <div class="mt-4 bg-white py-3 px-md-5 rounded">
+    <h1 class="text-center">{{ post.title }}</h1>
+    <p><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></p>
+    <img src="{{post.image.url}}" alt="{{post.image.alternativeText}}" title="{{post.image.alternativeText}}" class="mw-100"/>
+    {% markdown %}{{ post.content | safe }}{% endmarkdown %}
+  </div>
+</div>
 {% endblock %}
