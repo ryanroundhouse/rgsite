@@ -142,6 +142,9 @@ a.wholeDivLink {
     color: #f78d1e;
     text-decoration: none;
   }
+  time{
+    margin-left: 16px;
+  }
 }
 
 // Layout styles
@@ -174,6 +177,14 @@ a.wholeDivLink {
 
 .container.vert {
   flex-direction: column;
+}
+
+article{
+  filter: drop-shadow(10px 10px 50px #333)
+}
+
+article.light{
+  filter: drop-shadow(10px 10px 50px #888)
 }
 
 .articlestream {

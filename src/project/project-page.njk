@@ -1,5 +1,5 @@
 ---
-layout: layouts/project-layout.njk
+layout: layouts/base-layout.njk
 templateClass: tmpl-post
 pagination:
   data: projects
@@ -9,15 +9,15 @@ permalink: project/{{ project.slug }}/index.html
 ---
 {% block content %}
 
-    <h1>{{ project.title }}</h1>
-    <time datetime="{{ project.date | dateIso }}">{{ project.date | dateReadable }}</time>
-    <ul class="mt-3">
-      {% for tech in project.technologies %}
-        <img src="{{tech.logo.url}}" alt="{{tech.logo.alternativeText}}" title="{{tech.logo.alternativeText}}"/>
-      {% endfor %}
-    </ul>
-
     <div class="mt-4 bg-white py-3 px-md-5 rounded">
+      <h1 class="text-center">{{ project.title }}</h1>
+      <p><time datetime="{{ project.date | dateIso }}">{{ project.date | dateReadable }}</time></p>
+      <ul class="mt-3">
+        {% for tech in project.technologies %}
+          <img src="{{tech.logo.url}}" alt="{{tech.logo.alternativeText}}" title="{{tech.logo.alternativeText}}"/>
+        {% endfor %}
+      </ul>
+
       <h2>Source code</h2>
       <p>
         <a href="{{ project.github }}">{{ project.title }} on github</a>
