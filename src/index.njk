@@ -51,7 +51,7 @@ layout: layouts/base-layout.njk
     <div class="articlestream">
       {% set maxNumberOfPostsToShow = posts.length if posts.length < 3 else 3 %}
       {% for i in range(0, maxNumberOfPostsToShow) %}
-        <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink">
+        <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink light">
           <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
             <a class="wholeDivLink" href="/post/{{ posts[i].slug }}/" aria-label="Read more on {{ posts[i].title }}"></a>
             <div>

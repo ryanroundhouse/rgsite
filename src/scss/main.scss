@@ -126,6 +126,9 @@ a.wholeDivLink {
   .h2 {
     margin: 20px 20px 20px;
   }
+  h1{
+    text-align: center;
+  }
 }
 
 @media (max-width: 320px) {
@@ -143,6 +146,12 @@ a.wholeDivLink {
     line-height: 26px;
     color: #f78d1e;
     text-decoration: none;
+  }
+  time{
+    margin-left: 16px;
+  }
+  h1{
+    text-align: center;
   }
 }
 
@@ -176,6 +185,14 @@ a.wholeDivLink {
 
 .container.vert {
   flex-direction: column;
+}
+
+article{
+  filter: drop-shadow(10px 10px 50px #333)
+}
+
+article.light{
+  filter: drop-shadow(10px 10px 50px #888)
 }
 
 .articlestream {
