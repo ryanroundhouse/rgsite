@@ -49,7 +49,7 @@ time {
 
 .h1,
 h1 {
-  font-family: Roboto-bold;
+  font-family: config.$title-font-family;
   font-weight: bold;
   letter-spacing: -3px;
   font-size: 40pt;
@@ -58,11 +58,13 @@ h1 {
 .h2,
 h2 {
   font-size: 24pt;
+  font-family: config.$title-font-family;
 }
 
 .h3,
 h3 {
   font-size: 22pt;
+  font-family: config.$title-font-family;
 }
 
 a.wholeDivLink {

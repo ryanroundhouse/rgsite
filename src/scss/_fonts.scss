@@ -13,6 +13,11 @@
 }
 
 @font-face {
-  font-family: Nexa-bold;
-  src: url('../webfonts/Nexa\ Bold.otf');
+  font-family: "Nexa Bold";
+  src: url('../webfonts/NexaBold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../webfonts/Raleway-VariableFont_wght.ttf');
 }
