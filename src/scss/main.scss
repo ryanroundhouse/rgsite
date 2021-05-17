@@ -67,6 +67,12 @@ h3 {
   font-family: config.$title-font-family;
 }
 
+.h4,
+h4 {
+  font-size: 20pt;
+  font-family: config.$title-font-family;
+}
+
 a.wholeDivLink {
   position: absolute;
   width: 92%;
@@ -126,7 +132,7 @@ a.wholeDivLink {
   .h2 {
     margin: 20px 20px 20px;
   }
-  h1{
+  h1 {
     text-align: center;
   }
 }
@@ -147,10 +153,10 @@ a.wholeDivLink {
     color: #f78d1e;
     text-decoration: none;
   }
-  time{
+  time {
     margin-left: 16px;
   }
-  h1{
+  h1 {
     text-align: center;
   }
 }
@@ -187,12 +193,13 @@ a.wholeDivLink {
   flex-direction: column;
 }
 
-article{
-  filter: drop-shadow(10px 10px 20px #333)
+article {
+  filter: drop-shadow(10px 10px 20px #333);
 }
 
-article.light{
-  // filter: drop-shadow(10px 10px 20px #888)
+.f-vert-con {
+  display: flex;
+  flex-direction: column;
 }
 
 .articlestream {
@@ -220,6 +227,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1 0 auto;
 }
 
 .fa-twitter,
