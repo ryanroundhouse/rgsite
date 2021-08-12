@@ -161,6 +161,17 @@ a.wholeDivLink {
   }
 }
 
+pre {
+  background-color: rgb(0, 43, 54);
+  padding: 8px;
+}
+
+code {
+  background-color: rgb(0, 43, 54);
+  color: #839496 !important;
+  background: #002b36;
+}
+
 // Layout styles
 
 div.inheritwidth {
