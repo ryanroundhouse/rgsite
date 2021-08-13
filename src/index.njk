@@ -55,7 +55,9 @@ layout: layouts/base-layout.njk
           <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
             <a class="wholeDivLink" href="/post/{{ posts[i].slug }}/" aria-label="Read more on {{ posts[i].title }}"></a>
             <div>
-              <h2>{{ posts[i].title }}</h2><br/>
+              <h2>{{ posts[i].title }}</h2>
+            </div>
+            <div>
               <p>{{ posts[i].excerpt }}</p>
             </div>
             <div class="align-self-end">

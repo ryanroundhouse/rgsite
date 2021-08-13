@@ -172,6 +172,17 @@ code {
   background: #002b36;
 }
 
+.three-row-aligned {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-self-end {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Layout styles
 
 div.inheritwidth {
