@@ -28,6 +28,7 @@ async function getAllPosts() {
               id,
               title,
               date,
+              published_at,
               content,
               excerpt,
               slug,
@@ -74,8 +75,16 @@ async function getAllPosts() {
     }
   }
 
+  const now = new Date();
+  const today = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate();
+
   // format blogposts objects
   const postsFormatted = posts
+    .filter((item) => {
+      const postPublish = new Date(item.published_at);
+      const now = new Date();
+      return postPublish <= now;
+    })
     .map((item) => {
       return {
         id: item.id,
