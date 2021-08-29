@@ -75,9 +75,6 @@ async function getAllPosts() {
     }
   }
 
-  const now = new Date();
-  const today = now.getFullYear() + '-' + now.getMonth() + '-' + now.getDate();
-
   // format blogposts objects
   const postsFormatted = posts
     .filter((item) => {
