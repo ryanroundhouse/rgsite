@@ -86,7 +86,7 @@ async function getAllPosts() {
       return {
         id: item.id,
         title: item.title,
-        date: item.date,
+        date: new Date(item.date),
         excerpt: item.excerpt,
         content: item.content,
         slug: item.slug,
