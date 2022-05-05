@@ -30,8 +30,8 @@
     "markdown-it": "^13.0.1",
     "moment": "^2.28.0",
     "ms": "^2.1.2",
-    "node-fetch": "^2.6.1",
-    "node-sass": "^6.0.1",
+    "node-fetch": "^2.6.7",
+    "node-sass": "^7.0.1",
     "node-sass-promise": "^1.0.0",
     "rename": "^1.0.4",
     "rimraf": "^3.0.2"
