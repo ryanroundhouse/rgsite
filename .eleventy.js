@@ -29,6 +29,10 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob('src/posts/**/blog/*.md').reverse();
   });
 
+  eleventyConfig.addCollection('old-posts', function (collection) {
+    return collection.getFilteredByGlob('src/old-posts/**/blog/*.md').reverse();
+  });
+
   eleventyConfig.addJavaScriptFunction(
     'myResponsiveImage',
     function (src, options) {
