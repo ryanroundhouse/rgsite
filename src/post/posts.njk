@@ -1,26 +1,28 @@
 ---
 layout: layouts/base-layout.njk
 pagination:
-  data: posts
+  data: collections.post
   size: 6
   alias: post
+  reverse: true
 permalink: /post-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
 ---
 <div class="container">
     <h1 class="mb-4 mt-3">Posts</h1>
     <h2 class="mb-4 mt-3">Page {{ pagination.pageNumber + 1}}</h2>
 </div>
+
 <div class="container">
     <div class="row m-0 mx-n3">
     {# loop through paginated item #}
         {% for item in pagination.items %}
         <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4">
             <div class="h-100 bg-white p-2 text-center rounded">
-                <a class="wholeDivLink" href="/post/{{ item.slug }}" aria-label="Read more on {{ item.title }}"></a>
+                <a class="wholeDivLink" href="{{ item.url }}" aria-label="Read more on {{ item.data.title }}"></a>
                 <div class="f-vert-con h-100">
                     <div class="main-content">
-                        <h2 >{{ item.title }}</h2><br/>
-                        <p>{{ item.excerpt }}</p>
+                        <h2>{{ item.data.title }}</h2><br/>
+                        <p>{{ item.data.excerpt }}</p>
                     </div>
                     <div class="footer">
                         <time datetime="{{ item.date | dateIso }}">{{ item.date | dateReadable }}</time>
@@ -33,7 +35,7 @@ permalink: /post-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNu
 </div>
 
 {# pagination #}
-{% if pagination.hrefs | length > 6 %}
+{% if pagination.hrefs | length > 1 %}
     <ul>
 {% if pagination.previousPageHref %}
     <li><a href="{{ pagination.previousPageHref }}">Previous page</a></li>
