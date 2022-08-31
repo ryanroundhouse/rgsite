@@ -5,7 +5,7 @@ date: 2021-08-03
 tags: ['post']
 ---
       
-We all make mistakes.  Some are not important, but some are expensive.  The purpose of testing is to try and discover mistakes as early in the SDLC as possible.
+We all make <!-- Excerpt Start --> mistakes.  Some are not important, but some are expensive. <!-- Excerpt End -->  The purpose of testing is to try and discover mistakes as early in the SDLC as possible.
 
 Discovering a mistake in a backlog grooming session is as cheap as you get, where the expense is clarifying acceptance criteria or rephrasing an expected result.
 

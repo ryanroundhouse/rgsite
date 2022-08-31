@@ -22,7 +22,7 @@ permalink: /post-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNu
                 <div class="f-vert-con h-100">
                     <div class="main-content">
                         <h2>{{ item.data.title }}</h2><br/>
-                        <p>{{ item.data.excerpt }}</p>
+                        <p>{% excerpt item %}</p>
                     </div>
                     <div class="footer">
                         <time datetime="{{ item.date | dateIso }}">{{ item.date | dateReadable }}</time>

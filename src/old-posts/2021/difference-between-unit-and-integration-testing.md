@@ -7,7 +7,7 @@ tags: ['post']
       
 Under the umbrella of 'automated developer testing' there are 2 often confused activities: Unit testing and Integration testing. Each is meant to provide a different benefit than the other, but the fact that integration testing can be used for less effective unit testing leads to confusion of where the boundaries should lie.
 
-In order to understand this, we need to come to a shared understanding of the definition of these two activities, so I'll start with that.
+In order to understand this, <!-- Excerpt Start -->we need to come to a shared understanding of the definition of these two activities<!-- Excerpt End -->, so I'll start with that.
 
 > Unit testing is the activity of producing and executing automated tests that validate the behavior of code under test.
 

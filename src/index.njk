@@ -5,10 +5,10 @@ layout: layouts/base-layout.njk
 <div class="jumbotron p-3 text-white bg-dark mb-5 py-5">
   <div class="container">
     <div class="col-md-8 col-lg-6 px-0">
-      <a class="wholeDivLink" href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}"></a>
-      <h1 class="display-4 font-italic">{{posts[0].title}}</h1>
-      <p class="lead my-3">{{ posts[0].excerpt }}</p>
-      <a href="/post/{{ posts[0].slug }}" aria-label="Read more on {{ posts[0].title }}">Read more</a>
+      <a class="wholeDivLink" href="{{ collections.post[collections.post.length-1].url }}" aria-label="Read more on {{ collections.post[collections.post.length-1].data.title }}"></a>
+      <h1 class="display-4 font-italic">{{collections.post[collections.post.length-1].data.title}}</h1>
+      <p class="lead my-3">{% excerpt collections.post[collections.post.length-1] %}</p>
+      <a href="{{ collections.post[collections.post.length-1].url }}" aria-label="Read more on {{ collections.post[collections.post.length-1].data.title }}">Read more</a>
     </div>
   </div>
 </div>
@@ -49,19 +49,19 @@ layout: layouts/base-layout.njk
       <h1>Latest Posts</h1>
     </div>
     <div class="articlestream">
-      {% set maxNumberOfPostsToShow = posts.length if posts.length < 3 else 3 %}
-      {% for i in range(0, maxNumberOfPostsToShow) %}
+      {% set maxNumberOfPostsToShow = collections.post.length if collections.post.length < 3 else 3 %}
+      {% for i in range(1, maxNumberOfPostsToShow+1) %}
         <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4 articleLink light">
           <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
-            <a class="wholeDivLink" href="/post/{{ posts[i].slug }}/" aria-label="Read more on {{ posts[i].title }}"></a>
+            <a class="wholeDivLink" href="{{ collections.post[collections.post.length-i].url }}/" aria-label="Read more on {{ collections.post[collections.post.length-i].data.title }}"></a>
             <div>
-              <h2>{{ posts[i].title }}</h2>
+              <h2>{{ collections.post[collections.post.length-i].data.title }}</h2>
             </div>
             <div>
-              <p>{{ posts[i].excerpt }}</p>
+              <p>{% excerpt collections.post[collections.post.length-i] %}</p>
             </div>
             <div class="align-self-end">
-              <time datetime="{{ posts[i].date | dateIso }}">{{ posts[i].date | dateReadable }}</time>
+              <time datetime="{{ collections.post[collections.post.length-i].date | dateIso }}">{{ collections.post[collections.post.length-i].date | dateReadable }}</time>
             </div>
           </div>
         </article>

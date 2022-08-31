@@ -7,7 +7,7 @@ tags: ['post']
 
 I have been talking to my team lately about unit testing.
 
-I was excited to find the opportunity to share a real-world example with my team that highlights one of the differences between effective and brittle unit tests.
+I was excited to find the opportunity to share <!-- Excerpt Start -->a real-world example<!-- Excerpt End --> with my team that highlights one of the differences between effective and brittle unit tests.
 
 <hr>
 

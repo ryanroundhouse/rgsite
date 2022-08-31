@@ -5,9 +5,7 @@ date: 2021-10-30
 tags: ['post']
 ---
 
-{{ page | dump }}
-
-I was trying to find a new hire for one of our teams that performs primarily maintenance software development work. One of the best questions that I learned to ask to assess candidates is &quot;When you get assigned a bug to fix, what's the first thing you do?&quot;.
+I was trying to find a new hire for one of our teams that performs primarily maintenance software development work. One of the best questions that I learned to ask to assess candidates is <!-- Excerpt Start -->&quot;When you get assigned a bug to fix, what's the first thing you do?&quot;<!-- Excerpt End -->.
 
 The most common (and the worst answer) is something along the lines of &quot;I crack open the code and start looking around&quot;. The problem with this approach is that unless you're intimately familiar with the codebase (and no new hire could be) you're well along the path to assuming the solution. Let’s say you happen to be right (though it's unlikely). You make a change in the code, bring up the system, then trigger the bug. You can't reproduce it. That's great, it means you fixed the bug, right?
 
