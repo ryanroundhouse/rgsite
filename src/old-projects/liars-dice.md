@@ -1,8 +1,10 @@
 ---
 title: Liar's dice
 date: 2020-08-06
+layout: layouts/post-layout.njk
 technologies:
   ['angular', 'nodejs', 'typescript', 'bootstrap', 'github-actions', 'docker']
+tags: ['project']
 ---
 
 ## Description

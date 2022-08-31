@@ -1,9 +1,10 @@
 ---
 layout: layouts/base-layout.njk
 pagination:
-  data: projects
+  data: collections.project
   size: 6
   alias: project
+  reverse: true
 permalink: /project-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}/index.html
 ---
 <div class="container">
@@ -16,12 +17,12 @@ permalink: /project-list{% if pagination.pageNumber > 0 %}/page{{ pagination.pag
         {% for item in pagination.items %}
         <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4">
             <div class="three-row-aligned h-100 bg-white p-2 text-center rounded">
-                <a class="wholeDivLink" href="/project/{{ item.slug }}" aria-label="Read more on {{ item.title }}"></a>
+                <a class="wholeDivLink" href="{{ item.url }}" aria-label="Read more on {{ item.data.title }}"></a>
                 <div class="f-vert-con h-100">
                     <div class="main-content">
-                        <h2 >{{ item.title }}</h2><br/>
-                        {% for tech in item.technologies %}
-                            <img src="{{tech.logo.url}}" alt="{{tech.logo.alternativeText}}" title="{{tech.logo.alternativeText}}"/>
+                        <h2 >{{ item.data.title }}</h2><br/>
+                        {% for tech in item.data.technologies %}
+                            <img src="/img/icons/{{tech}}.png" alt="{{tech}}" title="{{tech}}"/>
                         {% endfor %}
                     </div>
                     <div class="footer">

@@ -1,7 +1,9 @@
 ---
 title: Bouncing Balls for Babies 0.5
+layout: layouts/post-layout.njk
 date: 2014-03-10
 technologies: ['xna', 'csharp']
+tags: ['project']
 ---
 
 <a href="/img/blog/bbfb-xna-screenshot.png">
@@ -10,6 +12,8 @@ technologies: ['xna', 'csharp']
     <img src="/img/blog/bbfb-xna-screenshot.png" alt="Flowers" style="width:auto;max-width:100%">
   </picture>
 </a>
+
+## Description
 
 This is a game I developed for my son. I wanted a game with images that he liked and would recognize as well as fun sound effects and gameplay.
 
@@ -22,3 +26,7 @@ Features:
 #s 1-5 will set the number of simultaneous bugs to spawn
 
 Insanity mode: hold down the space bar to increase the spawn rate of bugs to insane proportions
+
+## Repositories
+
+[bouncing balls for babies 0.5 on github](https://github.com/ryanroundhouse/bouncing.balls.for.babies)
